@@ -249,3 +249,45 @@ Tabs.Main3:AddButton({
 		}
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/MemeSea/main/Source.lua"))()-- 👈 link script tải
 	end
+	-- 1. TẠO GIAO DIỆN (GUI)
+local ScreenGui = Instance.new("ScreenGui")
+local MainFrame = Instance.new("Frame") -- Cái Menu của bạn
+local ToggleButton = Instance.new("ImageButton") -- Cục tròn tròn
+local UICorner = Instance.new("UICorner")
+
+-- Thiết lập GUI nằm trên cùng, không bị game đè
+ScreenGui.Name = "ToggleMenuSystem"
+ScreenGui.Parent = game:GetService("CoreGui")
+ScreenGui.DisplayOrder = 999
+
+-- 2. THIẾT LẬP CỤC TRÒN (Nút bấm)
+ToggleButton.Name = "FloatingIcon"
+ToggleButton.Parent = ScreenGui
+ToggleButton.Size = UDim2.new(0, 60, 0, 60)
+ToggleButton.Position = UDim2.new(0.1, 0, 0.4, 0) -- Vị trí ban đầu
+ToggleButton.BackgroundColor3 = Color3.fromRGB(0, 255, 127) -- Màu xanh lá
+ToggleButton.Active = true
+ToggleButton.Draggable = true -- Bạn có thể kéo cục này đi khắp màn hình
+
+UICorner.CornerRadius = UDim.new(1, 0) -- Làm cho nó thành hình tròn
+UICorner.Parent = ToggleButton
+
+-- 3. THIẾT LẬP MENU (Cái bảng hiện ra)
+MainFrame.Name = "MyMenu"
+MainFrame.Parent = ScreenGui
+MainFrame.Size = UDim2.new(0, 250, 0, 300)
+MainFrame.Position = UDim2.new(0.5, -125, 0.5, -150)
+MainFrame.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+MainFrame.Visible = false -- Lúc đầu vào game sẽ ẩn đi
+
+-- 4. CODE LOGIC ĐÓNG/MỞ (QUAN TRỌNG NHẤT)
+-- Hàm này sẽ đảo ngược trạng thái Visible mỗi khi bấm
+ToggleButton.MouseButton1Click:Connect(function()
+    if MainFrame.Visible == false then
+        MainFrame.Visible = true
+        print("Menu: Đã Mở")
+    else
+        MainFrame.Visible = false
+        print("Menu: Đã Đóng")
+    end
+end)
