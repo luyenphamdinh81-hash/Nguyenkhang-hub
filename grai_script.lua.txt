@@ -1,0 +1,319 @@
+local Players = game:GetService("Players")
+local TweenService = game:GetService("TweenService")
+local player = Players.LocalPlayer
+
+-- 🌌 INTRO GUI
+local gui = Instance.new("ScreenGui")
+gui.Name = "GraiIntro"
+gui.IgnoreGuiInset = true
+gui.ResetOnSpawn = false
+gui.Parent = player:WaitForChild("PlayerGui")
+
+-- Nền tối nhẹ
+local bg = Instance.new("Frame")
+bg.Size = UDim2.new(1,0,1,0)
+bg.BackgroundColor3 = Color3.fromRGB(0,0,0)
+bg.BackgroundTransparency = 0.3
+bg.Parent = gui
+
+-- Logo Image
+local logo = Instance.new("ImageLabel")
+logo.Parent = gui
+logo.AnchorPoint = Vector2.new(0.5,0.5)
+logo.Position = UDim2.new(0.5,0,0.5,0)
+logo.Size = UDim2.new(0,0,0,0) -- bắt đầu nhỏ rồi zoom
+logo.BackgroundTransparency = 1
+logo.Image = "http://www.roblox.com/asset/?id=77111304194141"
+logo.ImageTransparency = 1
+
+-- Hiện logo (zoom + fade in)
+TweenService:Create(logo, TweenInfo.new(1.5, Enum.EasingStyle.Elastic, Enum.EasingDirection.Out), {
+    Size = UDim2.new(0,200,0,200),
+    ImageTransparency = 0
+}):Play()
+
+-- Xoay logo
+task.spawn(function()
+    while logo.Parent do
+        logo.Rotation = logo.Rotation + 0.5
+        task.wait(0.01)
+    end
+end)
+
+-- Chữ bên dưới logo
+local msg = Instance.new("TextLabel")
+msg.Parent = gui
+msg.AnchorPoint = Vector2.new(0.5,0)
+msg.Position = UDim2.new(0.5,0,0.75,0)
+msg.Size = UDim2.new(0,600,0,80)
+msg.BackgroundTransparency = 1
+msg.Text = "EZ Hub"
+msg.TextColor3 = Color3.fromRGB(0,255,255)
+msg.Font = Enum.Font.GothamBlack
+msg.TextScaled = true
+msg.TextStrokeTransparency = 0
+msg.TextStrokeColor3 = Color3.fromRGB(0,0,0)
+msg.TextTransparency = 1
+
+-- Chữ fade in
+TweenService:Create(msg, TweenInfo.new(1.2), {TextTransparency=0}):Play()
+
+-- Giữ intro 4s
+task.wait(4)
+
+-- Fade out tất cả
+TweenService:Create(logo, TweenInfo.new(1.2), {ImageTransparency=1}):Play()
+TweenService:Create(msg, TweenInfo.new(1.2), {TextTransparency=1}):Play()
+TweenService:Create(bg, TweenInfo.new(1.2), {BackgroundTransparency=1}):Play()
+task.wait(1.5)
+
+gui:Destroy()
+
+------------------------------------------------------------
+-- 🎛 MAIN UI BUTTON
+local ScreenGui = Instance.new("ScreenGui")
+ScreenGui.Parent = game.CoreGui
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+local ImageButton = Instance.new("ImageButton")
+ImageButton.Parent = ScreenGui
+ImageButton.BackgroundColor3 = Color3.fromRGB(0,0,0)
+ImageButton.BorderSizePixel = 0
+ImageButton.Position = UDim2.new(0.1,0,0.15,0)
+ImageButton.Size = UDim2.new(0,40,0,40)
+ImageButton.Draggable = true
+ImageButton.Image = "http://www.roblox.com/asset/?id=79169432288417"
+
+local UICorner = Instance.new("UICorner")
+UICorner.Parent = ImageButton
+UICorner.CornerRadius = UDim.new(1,10)
+
+ImageButton.MouseButton1Down:Connect(function()
+    game:GetService("VirtualInputManager"):SendKeyEvent(true,Enum.KeyCode.End,false,game)
+end)
+
+------------------------------------------------------------
+-- 📦 LOAD FLUENT
+repeat task.wait() until game:IsLoaded()
+local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
+
+local Window = Fluent:CreateWindow({
+    Title="EZ tổng hợp",
+    SubTitle="Tổng Hợp Script",
+    TabWidth=157,
+    Size=UDim2.fromOffset(450,300),
+    Acrylic=true,
+    Theme="Aqua",
+    MinimizeKey=Enum.KeyCode.End
+})
+
+-- Tabs
+local Tabs = {
+    Main0=Window:AddTab({Title="Thông Tin"}),
+    Main1=Window:AddTab({Title="Blox Fruits"}),
+    Main2=Window:AddTab({Title="Banana Hub | Maru Hub"}),
+    Main3=Window:AddTab({Title="farm bounty"})
+    Main4=Window:AddTab({Title="auto nhặt rương"})
+    Main5=Window:AddTab({Title="hop sever"})
+    Main6=Window:AddTab({Title="kaitun"})
+}
+-- Tab 0: Thông Tin
+Tabs.Main0:AddButton({
+    Title="Zalo",
+    Description="PhamNguyenKhang",
+    Callback=function()
+        setclipboard("093885.2.3..0....1")
+    end
+})
+
+-- Tab 1: Blox Fruits
+Tabs.Main1:AddButton({
+    Title="Redz Hub",
+    Callback=function()
+        local Settings={JoinTeam="Pirates",Translator=true}
+        local Settings = {
+  JoinTeam = "Pirates"; -- Pirates/Marines
+  Translator = true; -- true/false
+}
+loadstring(game:HttpGet("https://raw.githubusercontent.com/PlockScripts/newredz/refs/heads/main/Remake-version.luau"))(Settings)
+    end
+})
+Tabs.Main1:AddButton({
+    Title="Orange",
+    Callback=function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/HieuDepTrai-Z/Dev_Orange/refs/heads/main/OrangeHub.lua"))()
+    end
+})
+Tabs.Main1:AddButton({
+    Title="Fix Lag",
+    Callback=function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/TurboLite/Script/main/FixLag.lua"))()
+    end
+})
+Tabs.Main1:AddButton({
+    Title="Gravity",
+    Callback=function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Dev-GravityHub/BloxFruit/refs/heads/main/Main.lua"))()
+    end
+})
+Tabs.Main1:AddButton({
+    Title="Blue x hub",
+    Callback=function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Dev-BlueX/BlueX-Hub/refs/heads/main/Main.lua"))()
+    end
+})
+Tabs.Main1:AddButton({
+    Title="quantum",
+    Callback=function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/flazhy/QuantumOnyx/refs/heads/main/QuantumOnyx.lua"))()
+    end
+})
+Tabs.Main1:AddButton({
+    Title="OMG",
+    Callback=function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Omgshit/Scripts/main/MainLoader.lua"))()
+    end
+})
+Tabs.Main1:AddButton({
+    Title="Bacon",
+    Callback=function()
+        repeat wait() until game:IsLoaded() and game.Players.LocalPlayer 
+getgenv().team = "Pirates" -- Pirates or Marines
+loadstring(game:HttpGet("https://raw.githubusercontent.com/vinh129150/hack/refs/heads/main/BaconHub.lua"))()
+    end
+})
+Tabs.Main1:AddButton({
+    Title="dragon hub",
+    Callback=function()
+        repeat wait() until game:IsLoaded() and game.Players.LocalPlayer 
+getgenv().team = "Pirates" -- Pirates or Marines
+loadstring(game:HttpGet("https://raw.githubusercontent.com/dragonhubdev/dragonwitheveryone/refs/heads/main/Main-BF.lua"))()
+    end
+})
+Tabs.Main1:AddButton({
+    Title="ok hub",
+    Callback=function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/fakekuri/Okhubhere/refs/heads/main/MainBloxFruit.lua"))()
+    end
+})
+-- Tab 3: farm bounty 
+Tabs.Main3:AddButton({
+    Title="Void",
+    Callback=function()
+        loadstring(game:HttpGet("https://api.voidhub.run.place/scripts/voidhubpvp.void"))() 
+    end
+})
+Tabs.Main3:AddButton({
+    Title="night hub",
+    Callback=function()
+        getgenv().Config = {
+
+    Team = "Pirates",
+
+    HuntConfig = {
+
+        ["Earned Notification Enabled"] = true,
+
+        ["Farm Delay"] = 0.22, -- 0.15 - Super Fast(Risk - Kick) | 0.22 Fast | 0.35 Medium | Max 0.5
+
+        ["Webhook"] = {
+
+            Enabled = false,
+
+            Url = ""
+
+        }
+
+    }
+
+}
+
+loadstring(game:HttpGet("https://api.luarmor.net/files/v4/loaders/2ffcdb62773f587bfb9eb0d52bb35b0c.lua"))()
+    end
+})
+Tabs.Main3:AddButton({
+    Title="hermanos",
+    Callback=function()
+        local script_mode = "PVP" -- PVP, FARM
+loadstring(game:HttpGet("https://raw.githubusercontent.com/hermanos-dev/hermanos-hub/refs/heads/main/Loader.lua"))()
+    end
+})
+
+-- Tab 3: Banana Hub | Maru Hub 
+Tabs.Main2:AddButton({
+    Title="Banana",
+    Callback=function()
+        repeat wait() until game:IsLoaded() and game.Players.LocalPlayer getgenv().Key = "XyZpQrStUvWxYzAbCdEfGhIjKl" loadstring(game:HttpGet("https://raw.githubusercontent.com/SkibidiXHub/vthangsitink/refs/heads/main/BananaHub.lua"))()
+    end
+})
+Tabs.Main2:AddButton({
+    Title="banana long hihi",
+    Callback=function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/longhihilonghihi-hub/main/refs/heads/main/BananaHub.lua"))()
+    end
+})
+Tabs.Main2:AddButton({
+    Title="Maru Hub",
+    Callback=function()
+       loadstring(game:HttpGet("https://raw.githubusercontent.com/longhihilonghihi-hub/MaruHubV1/refs/heads/main/MainV1.Lua "))()
+    end
+})
+-- Tab 4: nhặt rương auto
+Tabs.Main4:AddButton({
+    Title="nhặt rương long hihi",
+    Callback=function()
+       loadstring(game:HttpGet("https://raw.githubusercontent.com/longhihilonghihi-hub/Auto-Chest/refs/heads/main/MainV1.Luau"))()
+    end
+})
+Tabs.Main4:AddButton({
+    Title="nhặt rương neji",
+    Callback=function()
+       repeat wait() until game:IsLoaded() and game.Players.LocalPlayer
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Dev-NejiDepzai/Bloxfruits/refs/heads/main/AutoChest.lua"))()
+    end
+})
+-- Tab 5: hop sever
+Tabs.Main5:AddButton({
+    Title="hop sever ít người",
+    Callback=function()
+       loadstring(game:HttpGet("https://raw.githubusercontent.com/traurobloxdeptrai/traukhoaito/refs/heads/main/hoplow.lua"))()
+    end
+})
+Tabs.Main5:AddButton({
+    Title="hop sever night hub",
+    Callback=function()
+       loadstring(game:HttpGet("https://raw.githubusercontent.com/WhiteX1208/Scripts/refs/heads/main/HopScript.luau"))()
+    end
+})
+-- Tab 6: kaitun
+Tabs.Main6:AddButton({
+    Title="kaitun night hub",
+    Callback=function()
+       getgenv().Config = {
+    Team = "Pirates",
+    FarmConfig = {
+        ["Out game when done all"] = true,
+        ["Bypass Teleport"] = true,
+        ["Double Quest(RISK)"] = true
+    },
+    Items = {
+        ["Saber"] = true,
+        ["Pole (1st form)"] = true,
+        ["Skull Guitar"] = true,
+        ["Cursed Dual Katana"] = true,
+        ["Godhuman"] = true
+    },
+    Webhook = {
+        ["Enabled"] = false,
+        ["Url"] = ""
+    }
+}
+loadstring(game:HttpGet("https://api.luarmor.net/files/v4/loaders/d6c7959dcc94cd24467080d82a56dcf9.lua"))()
+    end
+})
+Tabs.Main6:AddButton({
+    Title="kaitun apex",
+    Callback=function()
+       loadstring(game:HttpGet("https://raw.githubusercontent.com/Uranus9103/apexhubpro/refs/heads/main/Apexhubfarmv1.lua"))()
+    end
+})
