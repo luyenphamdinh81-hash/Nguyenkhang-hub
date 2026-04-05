@@ -1,0 +1,354 @@
+-- ✅ MẪU CHUẨN CHO NGƯỜI MỚI | TÉO HUB 🍎
+-- Giữ nguyên giao diện thật, chỉ thêm hướng dẫn 👈 ngay bên cạnh dòng cần sửa
+
+repeat task.wait() until game:IsLoaded()
+
+-- 🟢 Nút mở menu chính
+local ScreenGui = Instance.new("ScreenGui")
+local ImageButton = Instance.new("ImageButton")
+local UICorner = Instance.new("UICorner")
+
+ScreenGui.Parent = game.CoreGui
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+ImageButton.Parent = ScreenGui
+ImageButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ImageButton.BorderSizePixel = 0
+ImageButton.Position = UDim2.new(0.10615778, 0, 0.16217947, 0)
+ImageButton.Size = UDim2.new(0, 40, 0, 40)
+ImageButton.Draggable = true
+ImageButton.Image = "http://www.roblox.com/asset/?id=79169432288417"  -- 👈 đổi ID ảnh nút mở menu tại đây (ảnh roblox)
+
+UICorner.CornerRadius = UDim.new(1, 10)
+UICorner.Parent = ImageButton
+
+ImageButton.MouseButton1Down:Connect(function()
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, Enum.KeyCode.End, false, game)
+end)
+
+-- 🟣 Giao diện Fluent
+local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
+repeat wait() until game:IsLoaded()
+
+-- 🪟 Cửa sổ chính
+local Window = Fluent:CreateWindow({
+	Title = "EZ tổng hợp | BloxFruits",         -- 👈 đổi thành tên script của bạn
+	SubTitle = "by Pham Nguyen Khang",              -- 👈 đổi mô tả phụ
+	TabWidth = 157,
+	Size = UDim2.fromOffset(450, 300),
+	Acrylic = true,
+	Theme = "Aqua",                   -- 👈 đổi màu chủ đạo: Amethyst, Dark, Aqua, Light,...
+	MinimizeKey = Enum.KeyCode.End
+})
+
+-- 📑 Các tab (mục chính)
+local Tabs = {
+	Main0 = Window:AddTab({ Title = "thông tin chủ script" }),  -- 👈 đổi tên tab 1
+	Main1 = Window:AddTab({ Title = "farm Bloxfruits" }),  -- 👈 đổi tên tab 2
+	Main2 = Window:AddTab({ Title = "farm bounty" }),     -- 👈 đổi tên tab 3
+	Main3 = Window:AddTab({ Title = "Banana Hub | Maru Hub" }),        -- 👈 đổi tên tab 4
+	Main4 = Window:AddTab({ Title = "MeMe Sea" }),    -- 👈 đổi tên tab 5
+	Main5 = Window:AddTab({ Title = "Hop sever" }) -- 👈 đổi tên tab 6
+}
+
+------------------------------------------------
+-- TAB 1: Các kênh tiktok
+------------------------------------------------
+Tabs.Main0:AddButton({
+	Title = "tiktok bạn:)",              -- 👈 tên nút
+	Description = "oách xà lách vô cùng",-- 👈 mô tả nút
+	Callback = function()
+		setclipboard("https://www.tiktok.com/@pnkun.vn?_r=1&_t=ZS-95H75WlTGfH")  -- 👈 link sao chép
+	end
+})
+
+Tabs.Main0:AddButton({
+	Title = "tik",
+	Description = "làm chơi thui",
+	Callback = function()
+		setclipboard("https://www.tiktok.com/@pnkun.vn?_r=1&_t=ZS-95H7hw66fDD")     -- 👈 link khác
+	end
+})
+
+Tabs.Main0:AddButton({
+	Title = "tiktok",
+	Description = " 1 tim +1 động lực",
+	Callback = function()
+		setclipboard("https://vt.tiktok.com/ZSHA9aWJn/")
+	end
+})
+
+------------------------------------------------
+-- TAB 2: Ví dụ thêm script
+------------------------------------------------
+Tabs.Main1:AddButton({
+	Title = "speed hub🌱",                             -- 👈 tên nút hiển thị
+	Description = "script này ngon á đủ chức năng cả😃",-- 👈 mô tả
+	Callback = function()
+		local Settings = {
+			JoinTeam = "Pirates";   -- 👈 team mặc định: Pirates hoặc Marines
+			Translator = true;      -- 👈 bật dịch sang tiếng Việt nếu có
+		}
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))() -- 👈 link script tải
+	end
+})
+Tabs.Main1:AddButton({
+	Title = "Tày Hub",                             -- 👈 tên nút hiển thị
+	Description = "nà ná na na funk thanks door",-- 👈 mô tả
+	Callback = function()
+		local Settings = {
+			JoinTeam = "Pirates";   -- 👈 team mặc định: Pirates hoặc Marines
+			Translator = true;      -- 👈 bật dịch sang tiếng Việt nếu có
+		}
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/VTDROBLOX/Animehub/refs/heads/main/Tayhub.txt"))() -- 👈 link script tải
+	end
+})
+Tabs.Main1:AddButton({
+	Title = "Orange",                             -- 👈 tên nút hiển thị
+	Description = "hơi lag , khuyên máy yếu k nên dùng",-- 👈 mô tả
+	Callback = function()
+		local Settings = {
+			JoinTeam = "Pirates";   -- 👈 team mặc định: Pirates hoặc Marines
+			Translator = true;      -- 👈 bật dịch sang tiếng Việt nếu có
+		}
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/HieuDepTrai-Z/Dev_Orange/refs/heads/main/OrangeHub.lua"))() -- 👈 link script tải
+	end
+})
+Tabs.Main1:AddButton({
+	Title = "Gravity Hub",                             -- 👈 tên nút hiển thị
+	Description = "script săn sea event cực ngon",-- 👈 mô tả
+	Callback = function()
+		local Settings = {
+			JoinTeam = "Pirates";   -- 👈 team mặc định: Pirates hoặc Marines
+			Translator = true;      -- 👈 bật dịch sang tiếng Việt nếu có
+		}
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Dev-GravityHub/BloxFruit/refs/heads/main/Main.lua"))() -- 👈 link script tải
+	end
+})
+Tabs.Main1:AddButton({
+	Title = "Redz Hub bản remake",                             -- 👈 tên nút hiển thị
+	Description = "farm cũng tạm",-- 👈 mô tả
+	Callback = function()
+		local Settings = {
+			JoinTeam = "Pirates";   -- 👈 team mặc định: Pirates hoặc Marines
+			Translator = true;      -- 👈 bật dịch sang tiếng Việt nếu có
+		}
+		local Settings = {
+  JoinTeam = "Pirates"; -- Pirates/Marines
+  Translator = true; -- true/false
+}
+loadstring(game:HttpGet("https://raw.githubusercontent.com/PlockScripts/newredz/refs/heads/main/Remake-version.luau"))(Settings) -- 👈 link script tải
+	end
+})
+Tabs.Main1:AddButton({
+	Title = "Blue x hub",                             -- 👈 tên nút hiển thị
+	Description = "UI redz nhưng bá hơn Redz",-- 👈 mô tả
+	Callback = function()
+		local Settings = {
+			JoinTeam = "Pirates";   -- 👈 team mặc định: Pirates hoặc Marines
+			Translator = true;      -- 👈 bật dịch sang tiếng Việt nếu có
+		}
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Dev-BlueX/BlueX-Hub/refs/heads/main/Main.lua"))() -- 👈 link script tải
+	end
+})
+Tabs.Main3:AddButton({
+	Title = "Banana Hub",                             -- 👈 tên nút hiển thị
+	Description = "không khác gì banana tiền",-- 👈 mô tả
+	Callback = function()
+		local Settings = {
+			JoinTeam = "Pirates";   -- 👈 team mặc định: Pirates hoặc Marines
+			Translator = true;      -- 👈 bật dịch sang tiếng Việt nếu có
+		}
+		repeat wait() until game:IsLoaded() and game.Players.LocalPlayer getgenv().Key = "XyZpQrStUvWxYzAbCdEfGhIjKl" loadstring(game:HttpGet("https://raw.githubusercontent.com/SkibidiXHub/vthangsitink/refs/heads/main/BananaHub.lua"))() -- 👈 link script tải
+	end
+})
+Tabs.Main1:AddButton({
+	Title = "Banana Hub",                             -- 👈 tên nút hiển thị
+	Description = "không khác gì banana tiền",-- 👈 mô tả
+	Callback = function()
+		local Settings = {
+			JoinTeam = "Pirates";   -- 👈 team mặc định: Pirates hoặc Marines
+			Translator = true;      -- 👈 bật dịch sang tiếng Việt nếu có
+		}
+		repeat wait() until game:IsLoaded() and game.Players.LocalPlayer 
+
+getgenv().team = "Marines" -- Marines or Pirates
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Dev-NightMystic/Bloxfruits/refs/heads/main/Script.lua"))() -- 👈 link script tải
+	end
+})
+Tabs.Main3:AddButton({
+	Title = "Banana Hub long hihi",                             -- 👈 tên nút hiển thị
+	Description = "không khác gì banana tiền",-- 👈 mô tả
+	Callback = function()
+		local Settings = {
+			JoinTeam = "Pirates";   -- 👈 team mặc định: Pirates hoặc Marines
+			Translator = true;      -- 👈 bật dịch sang tiếng Việt nếu có
+		}
+		repeat wait() until game:IsLoaded() and game.Players.LocalPlayer 
+
+getgenv().team = "Marines" -- Marines or Pirates
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/longhihilonghihi-hub/main/refs/heads/main/BananaHub.lua"))() -- 👈 link script tải
+	end
+})
+Tabs.Main1:AddButton({
+	Title = "OMG",                             -- 👈 tên nút hiển thị
+	Description = "Redz Hub cũ k trình",-- 👈 mô tả
+	Callback = function()
+		local Settings = {
+			JoinTeam = "Pirates";   -- 👈 team mặc định: Pirates hoặc Marines
+			Translator = true;      -- 👈 bật dịch sang tiếng Việt nếu có
+		}
+		repeat wait() until game:IsLoaded() and game.Players.LocalPlayer 
+
+getgenv().team = "Marines" -- Marines or Pirates
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Omgshit/Scripts/main/MainLoader.lua"))() -- 👈 link script tải
+	end
+})
+Tabs.Main3:AddButton({
+	Title = "Maru Hub",                             -- 👈 tên nút hiển thị
+	Description = "Long hihi remake lại",-- 👈 mô tả
+	Callback = function()
+		local Settings = {
+			JoinTeam = "Pirates";   -- 👈 team mặc định: Pirates hoặc Marines
+			Translator = true;      -- 👈 bật dịch sang tiếng Việt nếu có
+		}
+		repeat wait() until game:IsLoaded() and game.Players.LocalPlayer 
+
+getgenv().team = "Marines" -- Marines or Pirates
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/longhihilonghihi-hub/MaruHubV1/refs/heads/main/MainV1.Lua "))() -- 👈 link script tải
+	end
+})
+Tabs.Main3:AddButton({
+	Title = "Trẩu v1",                             -- 👈 tên nút hiển thị
+	Description = "menu giống banana",-- 👈 mô tả
+	Callback = function()
+		local Settings = {
+			JoinTeam = "Pirates";   -- 👈 team mặc định: Pirates hoặc Marines
+			Translator = true;      -- 👈 bật dịch sang tiếng Việt nếu có
+		}
+		repeat wait() until game:IsLoaded() and game.Players.LocalPlayer 
+
+getgenv().team = "Marines" -- Marines or Pirates
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/trungdao2k4/trauroblox/refs/heads/main/traubluev1"))() -- 👈 link script tải
+	end
+})
+Tabs.Main1:AddButton({
+	Title = "ok hub",                             -- 👈 tên nút hiển thị
+	Description = "menu giống banana",-- 👈 mô tả
+	Callback = function()
+		local Settings = {
+			JoinTeam = "Pirates";   -- 👈 team mặc định: Pirates hoặc Marines
+			Translator = true;      -- 👈 bật dịch sang tiếng Việt nếu có
+		}
+		repeat wait() until game:IsLoaded() and game.Players.LocalPlayer 
+
+getgenv().team = "Marines" -- Marines or Pirates
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/fakekuri/Okhubhere/refs/heads/main/MainBloxFruit.lua"))() -- 👈 link script tải
+	end
+})
+Tabs.Main1:AddButton({
+	Title = "lấy võ cá v3",                             -- 👈 tên nút hiển thị
+	Description = "menu giống banana",-- 👈 mô tả
+	Callback = function()
+		local Settings = {
+			JoinTeam = "Pirates";   -- 👈 team mặc định: Pirates hoặc Marines
+			Translator = true;      -- 👈 bật dịch sang tiếng Việt nếu có
+		}
+		repeat wait() until game:IsLoaded() and game.Players.LocalPlayer 
+
+getgenv().team = "Marines" -- Marines or Pirates
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/DevHub-roblox/script-SYNTRAX-Hub/refs/heads/main/minigameblf.lua"))() -- 👈 link script tải
+	end
+})
+Tabs.Main1:AddButton({
+	Title = "leaf hub",                             -- 👈 tên nút hiển thị
+	Description = "menu giống banana",-- 👈 mô tả
+	Callback = function()
+		local Settings = {
+			JoinTeam = "Pirates";   -- 👈 team mặc định: Pirates hoặc Marines
+			Translator = true;      -- 👈 bật dịch sang tiếng Việt nếu có
+		}
+		repeat wait() until game:IsLoaded() and game.Players.LocalPlayer 
+
+getgenv().team = "Marines" -- Marines or Pirates
+
+repeat task.wait() until game:IsLoaded() and game.Players.LocalPlayer
+
+loadstring(game:HttpGet("https://github.com/LeafHubAcademy/LeafHub/raw/refs/heads/main/Leaf.lua"))() -- 👈 link script tải
+	end
+})
+Tabs.Main1:AddButton({
+	Title = "bacon hub",                             -- 👈 tên nút hiển thị
+	Description = "giống redz",-- 👈 mô tả
+	Callback = function()
+		local Settings = {
+			JoinTeam = "Pirates";   -- 👈 team mặc định: Pirates hoặc Marines
+			Translator = true;      -- 👈 bật dịch sang tiếng Việt nếu có
+		}
+		repeat wait() until game:IsLoaded() and game.Players.LocalPlayer 
+
+getgenv().team = "Marines" -- Marines or Pirates
+
+repeat task.wait() until game:IsLoaded() and game.Players.LocalPlayer
+
+repeat wait() until game:IsLoaded() and game.Players.LocalPlayer 
+
+getgenv().team = "Pirates" -- Pirates or Marines
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/vinh129150/hack/refs/heads/main/BaconHub.lua"))() -- 👈 link script tải
+	end
+})
+Tabs.Main1:AddButton({
+	Title = "tiro",                             -- 👈 tên nút hiển thị
+	Description = "tạm tạm",-- 👈 mô tả
+	Callback = function()
+		local Settings = {
+			JoinTeam = "Pirates";   -- 👈 team mặc định: Pirates hoặc Marines
+			Translator = true;      -- 👈 bật dịch sang tiếng Việt nếu có
+		}
+		repeat wait() until game:IsLoaded() and game.Players.LocalPlayer 
+
+getgenv().team = "Marines" -- Marines or Pirates
+
+repeat task.wait() until game:IsLoaded() and game.Players.LocalPlayer
+
+repeat wait() until game:IsLoaded() and game.Players.LocalPlayer 
+
+getgenv().team = "Pirates" -- Pirates or Marines
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/NTTLOL/Tiro-Hub/refs/heads/main/TiroDel.lua.txt"))()
+ -- 👈 link script tải
+	end
+})
+Tabs.Main1:AddButton({
+	Title = "dragon",                             -- 👈 tên nút hiển thị
+	Description = "tạm tạm",-- 👈 mô tả
+	Callback = function()
+		local Settings = {
+			JoinTeam = "Pirates";   -- 👈 team mặc định: Pirates hoặc Marines
+			Translator = true;      -- 👈 bật dịch sang tiếng Việt nếu có
+		}
+		repeat wait() until game:IsLoaded() and game.Players.LocalPlayer 
+
+getgenv().team = "Marines" -- Marines or Pirates
+
+repeat task.wait() until game:IsLoaded() and game.Players.LocalPlayer
+
+repeat wait() until game:IsLoaded() and game.Players.LocalPlayer 
+
+getgenv().team = "Pirates" -- Pirates or Marines
+
+repeat wait() until game:IsLoaded() and game.Players.LocalPlayer 
+
+getgenv().team = "Pirates" -- Pirates or Marines
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/dragonhubdev/dragonwitheveryone/refs/heads/main/Main-BF.lua"))() -- 👈 link script tải
+	end
+})
