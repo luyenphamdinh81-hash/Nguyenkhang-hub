@@ -1,7 +1,7 @@
 if getgenv().EclipseHub then 
-	if game.CoreGui:FindFirstChild("Eclipse Hub GUI") then
+	if game.CoreGui:FindFirstChild("NguyenKhang Hub GUI") then
 		for i, v in ipairs(game.CoreGui:GetChildren()) do
-			if string.find(v.Name,  "Eclipse Hub") then
+			if string.find(v.Name,  "NguyenKhang Hub") then
 				v:Destroy()
 			end
 		end
@@ -49,8 +49,8 @@ local T1UIColor = {
     ["Border Color"] = Color3.fromRGB(50, 50, 50),
     ["Click Effect Color"] = Color3.fromRGB(0, 80, 200),
     ["Setting Icon Color"] = Color3.fromRGB(200, 200, 200),
-    ["Logo Image"] = "rbxassetid://91657962282669",
-    ["Notification Image"] = "rbxassetid://115125408886765",
+    ["Logo Image"] = "rbxassetid://91169320061483",
+    ["Notification Image"] = "rbxassetid://91169320061483",
     ["Search Icon Color"] = Color3.fromRGB(0, 80, 200),
     ["Search Icon Highlight Color"] = Color3.fromRGB(30, 100, 220),
     ["GUI Text Color"] = Color3.fromRGB(240, 240, 240),
@@ -160,7 +160,7 @@ end
 
 Library_Function.Gui = Instance.new('ScreenGui')
 Library_Function.Gui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-Library_Function.Gui.Name = 'Eclipse Hub GUI'
+Library_Function.Gui.Name = 'NguyenKhang Hub GUI'
 Library_Function.Gui.Enabled = false
 
 getgenv().ReadyForGuiLoaded = false
@@ -176,11 +176,11 @@ end)
 
 Library_Function.NotiGui = Instance.new('ScreenGui')
 Library_Function.NotiGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-Library_Function.NotiGui.Name = 'Eclipse Hub Notification'
+Library_Function.NotiGui.Name = 'NguyenKhang Hub Notification'
 
 Library_Function.HideGui = Instance.new('ScreenGui')
 Library_Function.HideGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-Library_Function.HideGui.Name = 'Eclipse Hub Btn'
+Library_Function.HideGui.Name = 'NguyenKhang Hub Btn'
 
 
 local btnHide = Instance.new('ImageButton', Library_Function.HideGui)
@@ -189,7 +189,7 @@ btnHide.BackgroundTransparency = 0
 btnHide.AnchorPoint = Vector2.new(0, 1)
 btnHide.Size = UDim2.new(0, 60, 0, 60)
 btnHide.Position = UDim2.new(0, 15, 1, -15)
-btnHide.Image = "rbxassetid://91657962282669"
+btnHide.Image = "rbxassetid://91169320061483"
 btnHide.ScaleType = Enum.ScaleType.Fit
 btnHide.ImageColor3 = Color3.fromRGB(255, 255, 255)
 btnHide.ClipsDescendants = true
@@ -219,9 +219,9 @@ imgHide.Position = UDim2.new(0.5, 0, 0.5, 0)
 
 Library.ToggleUI = function()
 	getgenv().UIToggled = not getgenv().UIToggled
-	if game.CoreGui:FindFirstChild("Eclipse Hub GUI") then
+	if game.CoreGui:FindFirstChild("NguyenKhang Hub GUI") then
 		for a, b in ipairs(game.CoreGui:GetChildren()) do
-			if b.Name == "Eclipse Hub GUI" then
+			if b.Name == "NguyenKhang Hub GUI" then
 				b.Enabled = getgenv().UIToggled
 			end
 		end
@@ -229,9 +229,9 @@ Library.ToggleUI = function()
 end
 
 Library.DestroyUI = function()
-	if game.CoreGui:FindFirstChild("Eclipse Hub GUI") then
+	if game.CoreGui:FindFirstChild("NguyenKhang Hub GUI") then
 		for i, v in ipairs(game.CoreGui:GetChildren()) do
-			if string.find(v.Name, "Eclipse Hub") then
+			if string.find(v.Name, "NguyenKhang Hub") then
 				v:Destroy()
 			end
 		end
@@ -239,9 +239,9 @@ Library.DestroyUI = function()
 end
 
 Library.DestroyUI = function()
-	if game.CoreGui:FindFirstChild("Eclipse Hub GUI") then
+	if game.CoreGui:FindFirstChild("NguyenKhang Hub GUI") then
 		for i, v in ipairs(game.CoreGui:GetChildren()) do
-			if string.find(v.Name,  "Eclipse Hub") then
+			if string.find(v.Name,  "NguyenKhang Hub") then
 				v:Destroy()
 			end
 		end
@@ -429,7 +429,7 @@ local libCreateNoti = function(Setting)
 	CloseImage.BackgroundColor3 = Color3.fromRGB(230, 230, 230)
 	CloseImage.BackgroundTransparency = 1.000
 	CloseImage.Size = UDim2.new(1, 0, 1, 0)
-	CloseImage.Image = "rbxassetid://3926305904"
+	CloseImage.Image = "rbxassetid://91169320061483"
 	CloseImage.ImageRectOffset = Vector2.new(284, 4)
 	CloseImage.ImageRectSize = Vector2.new(24, 24)
 	CloseImage.ImageColor3 = getgenv().UIColor["Search Icon Color"]
@@ -498,7 +498,7 @@ end
 
 
 function Library:CreateWindow(Setting)
-    local TitleNameMain = Setting.Title or "Eclipse Hub"
+    local TitleNameMain = Setting.Title or "NguyenKhang Hub"
     getgenv().MainDesc = Setting.Desc or Setting.Subtitle or ""
     
     if Setting.Image then
@@ -618,7 +618,7 @@ function Library:CreateWindow(Setting)
 	TextLabelMain.TextWrapped = true
 	TextLabelMain.TextXAlignment = Enum.TextXAlignment.Center
 	TextLabelMain.TextColor3 = getgenv().UIColor["GUI Text Color"]
-	TextLabelMain.Text = "<font color=\"rgb(0, 80, 200)\">Eclipse Hub</font> <font color=\"rgb(255,255,255)\">- Blox Fruit</font>"
+	TextLabelMain.Text = "<font color=\"rgb(0, 80, 200)\">NguyenKhang Hub</font> <font color=\"rgb(255,255,255)\">- Blox Fruit</font>"
 	TextLabelMain.TextStrokeTransparency = 0.8
 	TextLabelMain.TextStrokeColor3 = Color3.fromRGB(0, 0, 0)
 
@@ -697,7 +697,7 @@ function Library:CreateWindow(Setting)
 	SearchIcon.BackgroundTransparency = 1
 	SearchIcon.Position = UDim2.new(0.5, 0, 0.5, 0)
 	SearchIcon.Size = UDim2.new(0, 16, 0, 16)
-	SearchIcon.Image = "rbxassetid://8154282545"
+	SearchIcon.Image = "rbxassetid://91169320061483"
 	SearchIcon.ImageColor3 = Color3.fromRGB(240, 240, 230)
 
     SearchBox.Name = "SearchBox"
@@ -1037,7 +1037,7 @@ function Library:CreateWindow(Setting)
 		SearchIcon.BackgroundTransparency = 1.000
 		SearchIcon.Position = UDim2.new(0.5, 0, 0.5, 0)
 		SearchIcon.Size = UDim2.new(0, 16, 0, 16)
-		SearchIcon.Image = "rbxassetid://8154282545"
+		SearchIcon.Image = "rbxassetid://91169320061483"
 		SearchIcon.ImageColor3 = getgenv().UIColor["Search Icon Color"]
 
 		SearchButton.Name = "Search Button"
@@ -1205,7 +1205,7 @@ function Library:CreateWindow(Setting)
 			LineShadow.Position = UDim2.new(0.5, 0, 0.5, 0)
 			LineShadow.Size = UDim2.new(1, 8, 1, 8)
 			LineShadow.ZIndex = 0
-			LineShadow.Image = "rbxassetid://5028857084"
+			LineShadow.Image = "rbxassetid://91169320061483"
 			LineShadow.ImageTransparency = 0.6
 			LineShadow.ScaleType = Enum.ScaleType.Slice
 			LineShadow.SliceCenter = Rect.new(24, 24, 276, 276)
@@ -1264,7 +1264,7 @@ function Library:CreateWindow(Setting)
 				visibility.Position = UDim2.new(0.5, 0, 0.5, 0)
 				visibility.Size = UDim2.new(1, -4, 1, -4)
 				visibility.ZIndex = 2
-				visibility.Image = "rbxassetid://3926307971"
+				visibility.Image = "rbxassetid://91169320061483"
 				visibility.ImageRectOffset = Vector2.new(84, 44)
 				visibility.ImageRectSize = Vector2.new(36, 36)
 				visibility.ImageTransparency = 1
@@ -1276,7 +1276,7 @@ function Library:CreateWindow(Setting)
 				visibility_off.Position = UDim2.new(0.5, 0, 0.5, 0)
 				visibility_off.Size = UDim2.new(1, -4, 1, -4)
 				visibility_off.ZIndex = 2
-				visibility_off.Image = "rbxassetid://3926307971"
+				visibility_off.Image = "rbxassetid://91169320061483"
 				visibility_off.ImageRectOffset = Vector2.new(564, 44)
 				visibility_off.ImageRectSize = Vector2.new(36, 36)
 				visibility_off.ImageTransparency = 0
@@ -1352,7 +1352,7 @@ function Library:CreateWindow(Setting)
 				checkbox.BackgroundTransparency = 1.000
 				checkbox.Position = UDim2.new(1, -5, 0.5, 3)
 				checkbox.Size = UDim2.new(0, 25, 0, 25)
-				checkbox.Image = "rbxassetid://4552505888"
+				checkbox.Image = "rbxassetid://91169320061483"
 				checkbox.ImageColor3 = getgenv().UIColor["Toggle Border Color"]
 				check.Name = "check"
 				check.Parent = checkbox
@@ -1543,7 +1543,7 @@ function Library:CreateWindow(Setting)
              ImageLabel_1.Position = UDim2.new(0.5, 0,0.5, 0)
              ImageLabel_1.Size = UDim2.new(1, 14,1, 14)
              ImageLabel_1.ZIndex = 0
-             ImageLabel_1.Image = "rbxassetid://5028857084"
+             ImageLabel_1.Image = "rbxassetid://91169320061483"
              ImageLabel_1.ImageTransparency = 0.7
              ImageLabel_1.ScaleType = Enum.ScaleType.Slice
              ImageLabel_1.SliceCenter = Rect.new(24, 24, 276, 276)
@@ -1772,7 +1772,7 @@ function Library:CreateWindow(Setting)
                 ImgDrop.BorderColor3 = Color3.fromRGB(27, 42, 53)
                 ImgDrop.Position = UDim2.new(1, -6, 0.5, 0)
                 ImgDrop.Size = UDim2.new(0, 15, 0, 15)
-                ImgDrop.Image = "rbxassetid://6954383209"
+                ImgDrop.Image = "rbxassetid://91169320061483"
                 ImgDrop.ImageColor3 = getgenv().UIColor["Dropdown Icon Color"]
                 
                 DropdownButton.Name = "DropdownButton"
@@ -2234,7 +2234,7 @@ function Library:CreateWindow(Setting)
 				ImgDrop.BorderColor3 = Color3.fromRGB(27, 42, 53)
 				ImgDrop.Position = UDim2.new(1, -6, 0.5, 0)
 				ImgDrop.Size = UDim2.new(0, 15, 0, 15)
-				ImgDrop.Image = "rbxassetid://6954383209"
+				ImgDrop.Image = "rbxassetid://91169320061483"
 				ImgDrop.ImageColor3 = getgenv().UIColor["Dropdown Icon Color"]
 				DropdownButton.Name = "DropdownButton"
 				DropdownButton.Parent = Topdrop
@@ -2391,7 +2391,7 @@ function Library:CreateWindow(Setting)
 							SampleItemCheck.Position = UDim2.new(1, 0, 0.5, 0)
 							SampleItemCheck.Size = UDim2.new(0, 25, 0, 25)
 							SampleItemCheck.ZIndex = 2
-							SampleItemCheck.Image = "rbxassetid://3926305904"
+							SampleItemCheck.Image = "rbxassetid://91169320061483"
 							SampleItemCheck.ImageColor3 = UIColor["Dropdown Selected Check Color"]
 							SampleItemCheck.ImageRectOffset = Vector2.new(312, 4)
 							SampleItemCheck.ImageRectSize = Vector2.new(24, 24)
@@ -2756,7 +2756,7 @@ function Library:CreateWindow(Setting)
 								SampleItemCheck.Position = UDim2.new(1, 0, 0.5, 0)
 								SampleItemCheck.Size = UDim2.new(0, 25, 0, 25)
 								SampleItemCheck.ZIndex = 2
-								SampleItemCheck.Image = "rbxassetid://3926305904"
+								SampleItemCheck.Image = "rbxassetid://91169320061483"
 								SampleItemCheck.ImageColor3 = UIColor["Dropdown Selected Check Color"]
 								SampleItemCheck.ImageRectOffset = Vector2.new(312, 4)
 								SampleItemCheck.ImageRectSize = Vector2.new(24, 24)
@@ -3769,7 +3769,7 @@ pcall(function()
 end);
 
 local Window = Library:CreateWindow({
-    Title = "Eclipse Hub",
+    Title = "NguyenKhang Hub",
     SubTitle = "- Blox Fruit",
     SaveFolder = "EclipseHub.json",
     Image = "rbxassetid://91657962282669"
@@ -3805,7 +3805,7 @@ local MiscTab = Window:AddTab("Tab | Misc")
 task.delay(2, function()
 	pcall(function()
 		Library:Notify({
-			Title = "RenZinn",
+			Title = "NguyenKhang Hub",
 			Content = "Script loaded! Welcome, " .. game.Players.LocalPlayer.Name,
 			Icon = "rocket",
 			Duration = 6
@@ -3816,12 +3816,12 @@ end);
 InfoTab:AddSection("Discord")
 
 InfoTab:AddButton({
-	Title = "Join On Eclipse Community!",
+	Title = "Join On NguyenKhang Community!",
 	Callback = function()
-		setclipboard("https://discord.gg/jfNVNrApfb")
+		setclipboard("https://www.tiktok.com/@pnkun.vn?_r=1&_t=ZS-95RJhBIMtBn")
 		Library:Notify({
-			Title = "RenZinn",
-			Content = "Discord link copied to clipboard!",
+			Title = "NguyenKhang Hub",
+			Content = "TikTok link copied to clipboard!",
 			Duration = 4
 		})
 	end
@@ -3850,15 +3850,15 @@ InfoTab:AddParagraph({
 	Desc = ""
 })
 
-InfoTab:AddSection("Eclipse Hub Gen4 Version Stable: 🟢")
+InfoTab:AddSection("NguyenKhang Hub Gen4 Version Stable: 🟢")
 
 InfoTab:AddParagraph({
 	Title = "Gen 4.442 Updates:",
-	Desc = "Fix: Tween Teleport\nNew: Fast Attack (High, Super Fast Attack, Eclipse Attack)\nNew: Volcano Event Tab (And More)\nFixed: Random, Store, Teleport To Fruit (Tween Teleport)\nNew: Fishing Functions\nDisabled: Fully Volcanic\nFixed: Tab One Click (Functions Soon)\nNew: Auto True Triple Katana\nFix: Auto Cdk\nFix: Auto Skull Guitar\nFix: Lag\nNew: Teleport (Tab)\nFix: Shop (Tab)\nFix: Factory And Pirate Raid (Tab Farming)\nFix: Farm (Level Bone, Cake Prince, Tirant, More...)\nFix: Raids (Bug)\nFix: Sea Events (Bugs)\nFix: Elite Boss\nFix: Fast Attack (Not Working On Pc)\nNew: Farm Boss And Mastery\nNew: Auto Kick if Admin Joined And Anti Ban\nNew: PvP Functions"
+	Desc = "Fix: Tween Teleport\nNew: Fast Attack (High, Super Fast Attack, NguyenKhang Attack)\nNew: Volcano Event Tab (And More)\nFixed: Random, Store, Teleport To Fruit (Tween Teleport)\nNew: Fishing Functions\nDisabled: Fully Volcanic\nFixed: Tab One Click (Functions Soon)\nNew: Auto True Triple Katana\nFix: Auto Cdk\nFix: Auto Skull Guitar\nFix: Lag\nNew: Teleport (Tab)\nFix: Shop (Tab)\nFix: Factory And Pirate Raid (Tab Farming)\nFix: Farm (Level Bone, Cake Prince, Tirant, More...)\nFix: Raids (Bug)\nFix: Sea Events (Bugs)\nFix: Elite Boss\nFix: Fast Attack (Not Working On Pc)\nNew: Farm Boss And Mastery\nNew: Auto Kick if Admin Joined And Anti Ban\nNew: PvP Functions"
 })
 InfoTab:AddParagraph({
 	Title = "Curiosity",
-	Desc = "Did you know in the first versions the name changed a lot? Saturn Hub, TRon VOid Hub, Guest Hub (Old), Love Hub and Today Eclipse Hub!"
+	Desc = "Did you know in the first versions the name changed a lot? Saturn Hub, TRon VOid Hub, Guest Hub (Old), Love Hub and Today NguyenKhang Hub!"
 })
 InfoTab:AddParagraph({
 	Title = "Community",
@@ -10024,7 +10024,7 @@ task.spawn(function()
 			if _isSpecialChestItem() then
 				_chestTweenActive = false;
 				_G.Settings.Farm["Auto Farm Chest Tween"] = false;
-				Library:Notify({Title = "Eclipse Hub", Content = "Special item found! Auto Chest stopped.", Icon = "bell", Duration = 6});
+				Library:Notify({Title = "NguyenKhang Hub", Content = "Special item found! Auto Chest stopped.", Icon = "bell", Duration = 6});
 				return;
 			end;
 			local chests = {};
@@ -10043,7 +10043,7 @@ task.spawn(function()
 				if _isSpecialChestItem() then
 					_chestTweenActive = false;
 					_G.Settings.Farm["Auto Farm Chest Tween"] = false;
-					Library:Notify({Title = "Eclipse Hub", Content = "Special item found!", Icon = "bell", Duration = 6});
+					Library:Notify({Title = "NguyenKhang Hub", Content = "Special item found!", Icon = "bell", Duration = 6});
 					break;
 				end;
 				local targetCF = v.RootPart.CFrame;
@@ -10066,7 +10066,7 @@ task.spawn(function()
 			end;
 			if _G.ChestHopActive and _G.ChestHopCount >= _G.ChestHopLimit then
 				_G.ChestHopCount = 0;
-				Library:Notify({Title = "Eclipse Hub", Content = "Chest Hop: limit reached, switching server...", Icon = "bell", Duration = 4});
+				Library:Notify({Title = "NguyenKhang Hub", Content = "Chest Hop: limit reached, switching server...", Icon = "bell", Duration = 4});
 				task.wait(2);
 				local module = (loadstring(game:HttpGet("https://raw.githubusercontent.com/raw-scriptpastebin/FE/main/Server_Hop_Settings")))();
 				module:Teleport(game.PlaceId);
@@ -10097,7 +10097,7 @@ task.spawn(function()
 			if _isSpecialChestItem() then
 				_chestBypassActive = false;
 				_G.Settings.Farm["Auto Farm Chest Instant"] = false;
-				Library:Notify({Title = "Eclipse Hub", Content = "Special item found! Chest Bypass stopped.", Icon = "bell", Duration = 6});
+				Library:Notify({Title = "NguyenKhangvHub", Content = "Special item found! Chest Bypass stopped.", Icon = "bell", Duration = 6});
 				return;
 			end;
 			local chests = {};
@@ -10149,7 +10149,7 @@ task.spawn(function()
 		end;
 		if _G.ChestHopActive and _G.ChestHopCount >= _G.ChestHopLimit then
 			_G.ChestHopCount = 0;
-			Library:Notify({Title = "Eclipse Hub", Content = "Chest Hop: switching server...", Icon = "bell", Duration = 4});
+			Library:Notify({Title = "NguyenKhang Hub", Content = "Chest Hop: switching server...", Icon = "bell", Duration = 4});
 			task.wait(2);
 			local module = (loadstring(game:HttpGet("https://raw.githubusercontent.com/raw-scriptpastebin/FE/main/Server_Hop_Settings")))();
 			module:Teleport(game.PlaceId);
@@ -10694,7 +10694,7 @@ local function ShowResetConfirm()
 					if isfile(path) then writefile(path, "{}"); end;
 				end;
 			end);
-			Library:Notify({Title = "Eclipse Hub", Content = "Settings reset! Re-execute the script.", Icon = "bell", Duration = 6});
+			Library:Notify({Title = "NguyenKhang Hub", Content = "Settings reset! Re-execute the script.", Icon = "bell", Duration = 6});
 		end);
 
 		naoBtn.MouseButton1Click:Connect(function() closeGui(); end);
@@ -12041,7 +12041,7 @@ end;
 local CommF = (game:GetService("ReplicatedStorage")).Remotes.CommF_;
 function GuitarPuzzleProgress()
 	if not CommF:InvokeServer("GuitarPuzzleProgress", "Check") then
-		if game.Lighting.Sky.MoonTextureId == "http://www.roblox.com/asset/?id=79169432288417" and (game.Lighting.ClockTime > 16 or game.Lighting.ClockTime < 5) then
+		if game.Lighting.Sky.MoonTextureId == "http://www.roblox.com/asset/?id=91169320061483" and (game.Lighting.ClockTime > 16 or game.Lighting.ClockTime < 5) then
 			if (game:GetService("Players")).LocalPlayer:DistanceFromCharacter(Vector3.new(-8654.314453125, 140.9499053955078, 6167.5283203125)) > 50 then
 				TweenPlayer(CFrame.new(-8654.314453125, 140.9499053955078, 6167.5283203125));
 			end;
@@ -14614,7 +14614,7 @@ ShopTab:AddDropdown({
 local function BuyFightStyleFull(styleName)
 	local data = FightStyleNPCs[styleName];
 	if not data then
-		Library:Notify({Title = "Eclipse Hub", Content = "Style not found: " .. tostring(styleName), Icon = "alert-triangle", Duration = 4});
+		Library:Notify({Title = "NguyenKhang Hub", Content = "Style not found: " .. tostring(styleName), Icon = "alert-triangle", Duration = 4});
 		return;
 	end;
 	local plr = game.Players.LocalPlayer;
@@ -14662,7 +14662,7 @@ local function BuyFightStyleFull(styleName)
 	pcall(function()
 		(game:GetService("ReplicatedStorage")).Remotes.CommF_:InvokeServer(data.buy, true);
 	end);
-	Library:Notify({Title = "Eclipse Hub", Content = "Purchase sent: " .. styleName, Icon = "check", Duration = 4});
+	Library:Notify({Title = "NguyenKhang Hub", Content = "Purchase sent: " .. styleName, Icon = "check", Duration = 4});
 end;
 
 ShopTab:AddButton({
@@ -14916,7 +14916,7 @@ local PortalIslands = {
 };
 SelectedTeleportIslandDropdown = TeleportTab:AddDropdown({
 	Title = "Choose Island",
-	Desc = "Lista dinamica do Eclipse - le o mapa real",
+	Desc = "Lista dinamica do NguyenKhang- le o mapa real",
 	Values = EclipseIslandList,
 	Value = EclipseIslandList[1] or "",
 	Callback = function(option)
@@ -14996,7 +14996,7 @@ TeleportTab:AddToggle({
 							hrp = plr.Character and plr.Character:FindFirstChild("HumanoidRootPart");
 							if hrp and (hrp.Position - destCF.p).Magnitude < 20 then
 								_G.BypassTeleportActive = false;
-								Library:Notify({Title = "Eclipse Hub", Content = "Arrived at: " .. _G.SelectIsland, Icon = "map-pin", Duration = 4});
+								Library:Notify({Title = "NguyenKhang Hub", Content = "Arrived at: " .. _G.SelectIsland, Icon = "map-pin", Duration = 4});
 							end;
 						end;
 					end;
@@ -15068,7 +15068,7 @@ end);
 local SelectedNpcName = EclipseNPCList[1] or "";
 SelectedNpcTeleport = TeleportTab:AddDropdown({
 	Title = "Choose Npc",
-	Desc = "Lista dinamica do Eclipse - NPCs reais do servidor",
+	Desc = "Lista dinamica do Eclipse- NPCs reais do servidor",
 	Values = EclipseNPCList,
 	Value = EclipseNPCList[1] or "",
 	Callback = function(option)
@@ -17190,7 +17190,7 @@ task.spawn(function()
 						hrp.CFrame = v.CFrame;
 						task.wait(0.2);
 						pcall(function()
-							Library:Notify({Title = "Eclipse Hub", Content = "Quest complete!", Icon = "bell", Duration = 6});
+							Library:Notify({Title = "NguyenKhang Hub", Content = "Quest complete!", Icon = "bell", Duration = 6});
 						end);
 						_G.AutoBlueGear = false;
 						if _G.Settings and _G.Settings.SeaStack then _G.Settings.SeaStack["Auto Blue Gear"] = false; (getgenv()).SaveSetting(); end;
@@ -17202,7 +17202,7 @@ task.spawn(function()
 						hrp.CFrame = v.CFrame;
 						task.wait(0.2);
 						pcall(function()
-							Library:Notify({Title = "Eclipse Hub", Content = "Quest complete!", Icon = "bell", Duration = 6});
+							Library:Notify({Title = "NguyenKhang Hub", Content = "Quest complete!", Icon = "bell", Duration = 6});
 						end);
 						_G.AutoBlueGear = false;
 						if _G.Settings and _G.Settings.SeaStack then _G.Settings.SeaStack["Auto Blue Gear"] = false; (getgenv()).SaveSetting(); end;
@@ -17217,7 +17217,7 @@ end);
 function GetHighestPoint()
 	for i, v in pairs((game:GetService("Workspace")).Map.MysticIsland:GetDescendants()) do
 		if v:IsA("MeshPart") then
-			if v.MeshId == "rbxassetid://83190276951914" then
+			if v.MeshId == "rbxassetid://91169320061483" then
 				return v;
 			end;
 		end;
@@ -17943,7 +17943,7 @@ GrabFruitButton = FruitTab:AddButton({
 });
 VisualSection = FruitTab:AddSection("Visual");
 function rainFruit()
-	for h, i in pairs((game:GetObjects("rbxassetid://14759368201"))[1]:GetChildren()) do
+	for h, i in pairs((game:GetObjects("rbxassetid://91169320061483"))[1]:GetChildren()) do
 		i.Parent = game.Workspace.Map;
 		i:MoveTo(game.Players.LocalPlayer.Character.PrimaryPart.Position + Vector3.new(math.random((-50), 50), 100, math.random((-50), 50)));
 		if i.Fruit:FindFirstChild("AnimationController") then
@@ -18147,15 +18147,15 @@ PrehistoricStatusParagraph = ServerTab:AddParagraph({
 task.spawn(function()
 	while task.wait() do
 		pcall(function()
-			if (game:GetService("Lighting")).Sky.MoonTextureId == "http://www.roblox.com/asset/?id=9709149431" then
+			if (game:GetService("Lighting")).Sky.MoonTextureId == "http://www.roblox.com/asset/?id=91169320061483" then
 				MoonServerParagraph:SetDesc("Full Moon 100%");
-			elseif (game:GetService("Lighting")).Sky.MoonTextureId == "http://www.roblox.com/asset/?id=9709149052" then
+			elseif (game:GetService("Lighting")).Sky.MoonTextureId == "http://www.roblox.com/asset/?id=91169320061483" then
 				MoonServerParagraph:SetDesc("Full Moon 75%");
-			elseif (game:GetService("Lighting")).Sky.MoonTextureId == "http://www.roblox.com/asset/?id=9709143733" then
+			elseif (game:GetService("Lighting")).Sky.MoonTextureId == "http://www.roblox.com/asset/?id=91169320061483" then
 				MoonServerParagraph:SetDesc("Full Moon 50%");
-			elseif (game:GetService("Lighting")).Sky.MoonTextureId == "http://www.roblox.com/asset/?id=9709150401" then
+			elseif (game:GetService("Lighting")).Sky.MoonTextureId == "http://www.roblox.com/asset/?id=91169320061483" then
 				MoonServerParagraph:SetDesc("Full Moon 25%");
-			elseif (game:GetService("Lighting")).Sky.MoonTextureId == "http://www.roblox.com/asset/?id=9709149680" then
+			elseif (game:GetService("Lighting")).Sky.MoonTextureId == "http://www.roblox.com/asset/?id=91169320061483" then
 				MoonServerParagraph:SetDesc("Full Moon 15%");
 			else
 				MoonServerParagraph:SetDesc("Full Moon 0%");
@@ -18632,7 +18632,7 @@ task.spawn(function()
 	end;
 
 	Library:Notify({
-		Title = "ReZinn",
+		Title = "Hub",
 		Content = "Auto Execute complete! Saved settings re-applied.",
 		Icon    = "check-circle",
 		Duration = 5
