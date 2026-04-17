@@ -7,7 +7,7 @@ if getgenv().Kynvex then
 		end
 	end
 end
-getgenv().EclipseHub = true
+getgenv().KynVex = true
 
 local executor = getexecutorname and getexecutorname() or identifyexecutor and identifyexecutor() or nil
 if executor then
@@ -3680,8 +3680,8 @@ task.spawn(function()
 				or _G.Settings.Farm["Auto Farm Ectoplasm"]
 				or _G.Settings.Farm["Auto Farm Katakuri"]
 				or _G.Settings.Farm["Auto Farm Material"]
-				or _G.EclipseStartFarm
-				or _G.EclipseAutoTyrant;
+				or _G.KynVexStartFarm
+				or _G.KynVexAutoTyrant;
 			local fastAttackOn = _G.Settings.Setting["Fast Attack New"];
 			if not (fastAttackOn or farmActive) then return; end;
 			local char = game.Players.LocalPlayer.Character;
@@ -3737,7 +3737,7 @@ pcall(function()
 		if gpe then return; end;
 		for _, key in ipairs(_movementKeys) do
 			if input.KeyCode == key then
-				if not _G.EclipseStartFarm and not _G.SailBoats and not _G.EclipseAutoTyrant then
+				if not _G.KynVexStartFarm and not _G.SailBoats and not _G.KynVexAutoTyrant then
 					shouldTween = false;
 					_G.StopTween = false;
 				end;
@@ -3748,7 +3748,7 @@ pcall(function()
 	UIS.InputBegan:Connect(function(input, gpe)
 		if gpe then return; end;
 		if input.UserInputType == Enum.UserInputType.Touch then
-			if not _G.EclipseStartFarm and not _G.SailBoats and not _G.EclipseAutoTyrant then
+			if not _G.KynVexStartFarm and not _G.SailBoats and not _G.KynVexAutoTyrant then
 				shouldTween = false;
 				_G.StopTween = false;
 			end;
@@ -3759,7 +3759,7 @@ pcall(function()
 		if input.KeyCode == Enum.KeyCode.Thumbstick1 then
 			local mag = Vector2.new(input.Position.X, input.Position.Y).Magnitude;
 			if mag > 0.15 then
-				if not _G.EclipseStartFarm and not _G.SailBoats and not _G.EclipseAutoTyrant then
+				if not _G.KynVexStartFarm and not _G.SailBoats and not _G.KynVexAutoTyrant then
 					shouldTween = false;
 					_G.StopTween = false;
 				end;
@@ -3771,7 +3771,7 @@ end);
 local Window = Library:CreateWindow({
     Title = "Kynvex",
     SubTitle = "- Premium",
-    SaveFolder = "EclipseHub.json",
+    SaveFolder = "KynVexHub.json",
     Image = "rbxassetid://81112013892539"
 })
 
@@ -3816,7 +3816,7 @@ end);
 InfoTab:AddSection("Discord")
 
 InfoTab:AddButton({
-	Title = "Join On Eclipse Community!",
+	Title = "Join On KynVex Community!",
 	Callback = function()
 		setclipboard("https://discord.gg/jfNVNrApfb")
 		Library:Notify({
@@ -3854,7 +3854,7 @@ InfoTab:AddSection("Kynvex Gen4 Version Stable: 🟢")
 
 InfoTab:AddParagraph({
 	Title = "Gen 4.442 Updates:",
-	Desc = "Fix: Tween Teleport\nNew: Fast Attack (High, Super Fast Attack, Eclipse Attack)\nNew: Volcano Event Tab (And More)\nFixed: Random, Store, Teleport To Fruit (Tween Teleport)\nNew: Fishing Functions\nDisabled: Fully Volcanic\nFixed: Tab One Click (Functions Soon)\nNew: Auto True Triple Katana\nFix: Auto Cdk\nFix: Auto Skull Guitar\nFix: Lag\nNew: Teleport (Tab)\nFix: Shop (Tab)\nFix: Factory And Pirate Raid (Tab Farming)\nFix: Farm (Level Bone, Cake Prince, Tirant, More...)\nFix: Raids (Bug)\nFix: Sea Events (Bugs)\nFix: Elite Boss\nFix: Fast Attack (Not Working On Pc)\nNew: Farm Boss And Mastery\nNew: Auto Kick if Admin Joined And Anti Ban\nNew: PvP Functions"
+	Desc = "Fix: Tween Teleport\nNew: Fast Attack (High, Super Fast Attack, KynVex Attack)\nNew: Volcano Event Tab (And More)\nFixed: Random, Store, Teleport To Fruit (Tween Teleport)\nNew: Fishing Functions\nDisabled: Fully Volcanic\nFixed: Tab One Click (Functions Soon)\nNew: Auto True Triple Katana\nFix: Auto Cdk\nFix: Auto Skull Guitar\nFix: Lag\nNew: Teleport (Tab)\nFix: Shop (Tab)\nFix: Factory And Pirate Raid (Tab Farming)\nFix: Farm (Level Bone, Cake Prince, Tirant, More...)\nFix: Raids (Bug)\nFix: Sea Events (Bugs)\nFix: Elite Boss\nFix: Fast Attack (Not Working On Pc)\nNew: Farm Boss And Mastery\nNew: Auto Kick if Admin Joined And Anti Ban\nNew: PvP Functions"
 })
 InfoTab:AddParagraph({
 	Title = "Curiosity",
@@ -6008,7 +6008,7 @@ BringEnemy = function()
 	local bringRange = _G.BringRange or 235;
 	local maxMobs    = _G.MobM or 10;
 	local count      = 0;
-	local isNearest  = (_G.EclipseFarm_Nearest == true);
+	local isNearest  = (_G.KynVexFarm_Nearest == true);
 	local mobName    = MonFarm;
 
 	local BRING_UNDER_DIST = 8;
@@ -6075,8 +6075,8 @@ task.spawn(function()
 				or _G.Settings.Main["Auto Farm Fruit Mastery"]
 				or _G.Settings.Main["Auto Farm Sword Mastery"]
 				or _G.Settings.Main["Auto Farm Gun Mastery"]
-				or _G.EclipseStartFarm
-				or _G.EclipseAutoTyrant;
+				or _G.KynVexStartFarm
+				or _G.KynVexAutoTyrant;
 			_B = farmActive and _G.Settings.Setting["Bring Mob"];
 			if _B then
 				BringEnemy();
@@ -6095,8 +6095,8 @@ task.spawn(function()
 				or _G.Settings.Main["Auto Farm Fruit Mastery"]
 				or _G.Settings.Main["Auto Farm Sword Mastery"]
 				or _G.Settings.Main["Auto Farm Gun Mastery"]
-				or _G.EclipseStartFarm
-				or _G.EclipseAutoTyrant;
+				or _G.KynVexStartFarm
+				or _G.KynVexAutoTyrant;
 			if farmActive and _G.Settings.Setting["Bring Mob"] then
 				local char = game.Players.LocalPlayer.Character;
 				if not char then return end;
@@ -6238,10 +6238,10 @@ task.spawn(function()
 			local hrp = char:FindFirstChild("HumanoidRootPart");
 			local hum = char:FindFirstChildOfClass("Humanoid");
 			if not hrp or not hum then return; end;
-			if hrp.Anchored and not _G.EclipseAutoTyrant then
+			if hrp.Anchored and not _G.KynVexAutoTyrant then
 				hrp.Anchored = false;
 			end;
-			if hum.WalkSpeed <= 0 and not _G.EclipseAutoTyrant then
+			if hum.WalkSpeed <= 0 and not _G.KynVexAutoTyrant then
 				hum.WalkSpeed = 16;
 			end;
 		end);
@@ -6651,13 +6651,13 @@ local function QuestNeta()
 	};
 end;
 
-_G.EclipseFarmMode    = "Level";
-_G.EclipseStartFarm   = false;
-_G.EclipseLevel       = false;
-_G.EclipseFarm_Bone   = false;
-_G.EclipseFarm_Cake   = false;
-_G.EclipseAutoTyrant  = false;
-_G.EclipseAcceptQuest = false;
+_G.KynVexFarmMode    = "Level";
+_G.KynVexStartFarm   = false;
+_G.KynVexLevel       = false;
+_G.KynVexFarm_Bone   = false;
+_G.KynVexFarm_Cake   = false;
+_G.KynVexAutoTyrant  = false;
+_G.KynVexAcceptQuest = false;
 
 local FARM_HEIGHT          = 45;
 local TP_DIST_THRESHOLD    = 15;
@@ -6675,7 +6675,7 @@ MainTab:AddDropdown({
 	Values = {"Level", "Bone", "Cake Prince", "Tyrant Of The Skies", "Nearest"},
 	Value = "Level",
 	Callback = function(v)
-		_G.EclipseFarmMode = v;
+		_G.KynVexFarmMode = v;
 	end
 });
 
@@ -6698,7 +6698,7 @@ MainTab:AddToggle({
 	Desc = "Aceita quest automaticamente antes de farmar",
 	Value = false,
 	Callback = function(v)
-		_G.EclipseAcceptQuest = v;
+		_G.KynVexAcceptQuest = v;
 	end
 });
 
@@ -6707,36 +6707,36 @@ AutoLevelFarmToggle = MainTab:AddToggle({
 	Desc = "Inicia o modo de farm selecionado",
 	Value = _G.Settings.Main["Auto Farm"],
 	Callback = function(v)
-		_G.EclipseStartFarm = v;
+		_G.KynVexStartFarm = v;
 		_G.Settings.Main["Auto Farm"] = v;
-		_G.EclipseLevel      = false;
-		_G.EclipseFarm_Bone  = false;
-		_G.EclipseFarm_Cake  = false;
-		_G.EclipseAutoTyrant = false;
-		_G.EclipseFarm_Nearest = false;
+		_G.KynVexLevel      = false;
+		_G.KynVexFarm_Bone  = false;
+		_G.KynVexFarm_Cake  = false;
+		_G.KynVexAutoTyrant = false;
+		_G.KynVexFarm_Nearest = false;
 		if v then
-			if _G.EclipseFarmMode == "Level" then
-				_G.EclipseLevel = true;
-			elseif _G.EclipseFarmMode == "Bone" then
-				_G.EclipseFarm_Bone = true;
-			elseif _G.EclipseFarmMode == "Cake Prince" then
-				_G.EclipseFarm_Cake = true;
-			elseif _G.EclipseFarmMode == "Tyrant Of The Skies" then
-				_G.EclipseAutoTyrant = true;
-			elseif _G.EclipseFarmMode == "Nearest" then
-				_G.EclipseFarm_Nearest = true;
+			if _G.KynVexFarmMode == "Level" then
+				_G.KynVexLevel = true;
+			elseif _G.KynVexFarmMode == "Bone" then
+				_G.KynVexFarm_Bone = true;
+			elseif _G.KynVexFarmMode == "Cake Prince" then
+				_G.KynVexFarm_Cake = true;
+			elseif _G.KynVexFarmMode == "Tyrant Of The Skies" then
+				_G.KynVexAutoTyrant = true;
+			elseif _G.KynVexFarmMode == "Nearest" then
+				_G.KynVexFarm_Nearest = true;
 			end;
 		end;
-		StopTween(_G.EclipseStartFarm);
+		StopTween(_G.KynVexStartFarm);
 		(getgenv()).SaveSetting();
 	end
 });
 
-_G.EclipseFarm_Nearest = false;
+_G.KynVexFarm_Nearest = false;
 _G.NearestFarmRadius = 150;
 task.spawn(function()
 	while task.wait(0.15) do
-		if not _G.EclipseFarm_Nearest or not _G.EclipseStartFarm then task.wait(0.3); continue; end;
+		if not _G.KynVexFarm_Nearest or not _G.KynVexStartFarm then task.wait(0.3); continue; end;
 		task.wait(0.1);
 		pcall(function()
 			local plr  = game.Players.LocalPlayer;
@@ -6783,7 +6783,7 @@ end);
 
 task.spawn(function()
 	while task.wait(0.2) do
-		if _G.EclipseLevel and _G.EclipseStartFarm then
+		if _G.KynVexLevel and _G.KynVexStartFarm then
 			pcall(function()
 				CheckQuest();
 				local plr = game:GetService("Players").LocalPlayer;
@@ -6864,7 +6864,7 @@ task.spawn(function()
 									MonFarm = v.Name;
 									pcall(function() v.Humanoid.WalkSpeed = 0; v.HumanoidRootPart.Size = Vector3.new(1,1,1); v.HumanoidRootPart.CanCollide = false; end);
 									Attack();
-								until not _G.EclipseStartFarm or not _G.EclipseLevel or v.Humanoid.Health <= 0 or (not v.Parent) or (game:GetService("Players")).LocalPlayer.PlayerGui.Main.Quest.Visible == false;
+								until not _G.KynVexStartFarm or not _G.KynVexLevel or v.Humanoid.Health <= 0 or (not v.Parent) or (game:GetService("Players")).LocalPlayer.PlayerGui.Main.Quest.Visible == false;
 							end;
 						end;
 					else
@@ -6880,7 +6880,7 @@ end);
 
 task.spawn(function()
 	while task.wait(0.15) do
-		if not (_G.EclipseFarm_Bone and _G.EclipseStartFarm) then continue; end;
+		if not (_G.KynVexFarm_Bone and _G.KynVexStartFarm) then continue; end;
 		pcall(function()
 			local plr = game.Players.LocalPlayer;
 			local hrp = plr.Character and plr.Character:FindFirstChild("HumanoidRootPart");
@@ -6888,12 +6888,12 @@ task.spawn(function()
 			local QuestUI  = plr.PlayerGui.Main.Quest;
 			local MOBS     = {"Reborn Skeleton","Living Zombie","Demonic Soul","Posessed Mummy"};
 			local npcPos   = CFrame.new(-9516.99, 172.01, 6078.46);
-			if _G.EclipseAcceptQuest and not QuestUI.Visible then
+			if _G.KynVexAcceptQuest and not QuestUI.Visible then
 				if (npcPos.Position - hrp.Position).Magnitude > 5 then
 					TweenPlayer(npcPos);
 					local t = 0;
 					repeat task.wait(0.1); t = t + 0.1;
-					until (npcPos.Position - hrp.Position).Magnitude <= 5 or t > 8 or not _G.EclipseFarm_Bone;
+					until (npcPos.Position - hrp.Position).Magnitude <= 5 or t > 8 or not _G.KynVexFarm_Bone;
 				else
 					local quests = {
 						{"StartQuest","HauntedQuest1",1},{"StartQuest","HauntedQuest1",2},
@@ -6925,7 +6925,7 @@ task.spawn(function()
 					until (closest.PrimaryPart.Position - hrp.Position).Magnitude <= 25
 						or t > 5
 						or not (closest.Parent and closest:FindFirstChild("Humanoid") and closest.Humanoid.Health > 0)
-						or not _G.EclipseFarm_Bone;
+						or not _G.KynVexFarm_Bone;
 				end;
 				EquipWeapon(_G.Settings.Main["Selected Weapon"]);
 				if closest.Parent and closest:FindFirstChild("Humanoid") and closest.Humanoid.Health > 0 then
@@ -6940,7 +6940,7 @@ task.spawn(function()
 					TweenPlayer(spawnCF);
 					local t = 0;
 					repeat task.wait(0.1); t = t + 0.1;
-					until (spawnCF.Position - hrp.Position).Magnitude <= 20 or t > 10 or not _G.EclipseFarm_Bone;
+					until (spawnCF.Position - hrp.Position).Magnitude <= 20 or t > 10 or not _G.KynVexFarm_Bone;
 				end;
 			end;
 		end);
@@ -6949,7 +6949,7 @@ end);
 
 task.spawn(function()
 	while task.wait(0.15) do
-		if not (_G.EclipseFarm_Cake and _G.EclipseStartFarm) then continue; end;
+		if not (_G.KynVexFarm_Cake and _G.KynVexStartFarm) then continue; end;
 		pcall(function()
 			local plr     = game.Players.LocalPlayer;
 			local hrp     = plr.Character and plr.Character:FindFirstChild("HumanoidRootPart");
@@ -6968,7 +6968,7 @@ task.spawn(function()
 				TweenPlayer(CakePos);
 				local t = 0;
 				repeat task.wait(0.1); t = t + 0.1;
-				until (hrp.Position - CakePos.Position).Magnitude <= 3000 or t > 15 or not _G.EclipseFarm_Cake;
+				until (hrp.Position - CakePos.Position).Magnitude <= 3000 or t > 15 or not _G.KynVexFarm_Cake;
 				return;
 			end;
 			if boss or portalOpen then
@@ -6978,7 +6978,7 @@ task.spawn(function()
 						TweenPlayer(bossTarget);
 						local t = 0;
 						repeat task.wait(0.05); t = t + 0.05;
-						until (bossTarget.Position - hrp.Position).Magnitude <= 30 or t > 6 or not _G.EclipseFarm_Cake;
+						until (bossTarget.Position - hrp.Position).Magnitude <= 30 or t > 6 or not _G.KynVexFarm_Cake;
 					end;
 					EquipWeapon(_G.Settings.Main["Selected Weapon"]);
 					G.Kill(boss, true);
@@ -6990,7 +6990,7 @@ task.spawn(function()
 				return;
 			end;
 			local CAKE_MOBS = {"Cookie Crafter","Cake Guard","Baking Staff","Head Baker"};
-			if _G.EclipseAcceptQuest and not plr.PlayerGui.Main.Quest.Visible then
+			if _G.KynVexAcceptQuest and not plr.PlayerGui.Main.Quest.Visible then
 				local questPos = CFrame.new(-1927.92, 37.80, -12842.54);
 				TpConditional(hrp, questPos, TP_DIST_THRESHOLD);
 				if (hrp.Position - questPos.Position).Magnitude <= 40 then
@@ -7022,7 +7022,7 @@ task.spawn(function()
 						or t > 5
 						or not (bestMob.Parent and bestMob.Humanoid.Health > 0)
 						or enemies:FindFirstChild("Cake Prince")
-						or not _G.EclipseFarm_Cake;
+						or not _G.KynVexFarm_Cake;
 				end;
 				if bestMob.Parent and bestMob.Humanoid.Health > 0 then
 					EquipWeapon(_G.Settings.Main["Selected Weapon"]);
@@ -7038,7 +7038,7 @@ end);
 
 task.spawn(function()
 	game:GetService("RunService").Stepped:Connect(function()
-		if _G.EclipseAutoTyrant and _G.EclipseStartFarm then
+		if _G.KynVexAutoTyrant and _G.KynVexStartFarm then
 			local char = game.Players.LocalPlayer.Character;
 			if char then
 				for _, part in pairs(char:GetDescendants()) do
@@ -7185,7 +7185,7 @@ local _TYRANT_DODGE_INTERVAL = 0.35;
 
 task.spawn(function()
 	while task.wait(0.05) do
-		if not (_G.EclipseAutoTyrant and _G.EclipseStartFarm) then continue; end;
+		if not (_G.KynVexAutoTyrant and _G.KynVexStartFarm) then continue; end;
 		pcall(function()
 			local plr  = game.Players.LocalPlayer;
 			local boss = workspace.Enemies:FindFirstChild("Tyrant of the Skies");
@@ -7210,7 +7210,7 @@ task.spawn(function()
 						plrChar = plr.Character;
 						plrHum  = plrChar and plrChar:FindFirstChildOfClass("Humanoid");
 						if plrHRP and plrHRP.Parent then plrHRP.CFrame = CFrame.new(highPos); end;
-					until (not _G.EclipseAutoTyrant) or (plrHum and plrHum.Health >= 10000) or t > 40;
+					until (not _G.KynVexAutoTyrant) or (plrHum and plrHum.Health >= 10000) or t > 40;
 					if plrHRP and plrHRP.Parent then plrHRP.Anchored = false; end;
 					return;
 				end;
@@ -7261,7 +7261,7 @@ task.spawn(function()
 				local hasQuest = pcall(function() return plr.PlayerGui.Main.Quest.Visible; end);
 				local questVisible = false;
 				pcall(function() questVisible = plr.PlayerGui.Main.Quest.Visible; end);
-				if _G.EclipseAcceptQuest and not questVisible then
+				if _G.KynVexAcceptQuest and not questVisible then
 					local char = plr.Character;
 					local hrp  = char and char:FindFirstChild("HumanoidRootPart");
 					if hrp then
@@ -10597,7 +10597,7 @@ local function ShowResetConfirm()
 	pcall(function()
 		local plr = game.Players.LocalPlayer;
 		local screenGui = Instance.new("ScreenGui");
-		screenGui.Name = "EclipseResetConfirm";
+		screenGui.Name = "KynVexResetConfirm";
 		screenGui.ResetOnSpawn = false;
 		screenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling;
 		screenGui.Parent = plr.PlayerGui;
@@ -10733,7 +10733,7 @@ task.spawn(function()
 				);
 				pcall(function() hrp.CFrame = hrp.CFrame * CFrame.new(jitter); end);
 			end;
-			if _G.FullyVolcanicActive or _G.EclipseStartFarm or _G.Settings.Main["Auto Farm"] then
+			if _G.FullyVolcanicActive or _G.KynVexStartFarm or _G.Settings.Main["Auto Farm"] then
 				pcall(function()
 					if not char:FindFirstChild("HasBuso") then
 						game.ReplicatedStorage.Remotes.CommF_:InvokeServer("Buso");
@@ -10991,9 +10991,9 @@ task.spawn(function()
 		task.wait(0);
 		if _G.Settings.Setting["Fast M1 Fruit"]
 			and (_G.ChooseWP == "Fruit" or _G.Settings.Main["Select Weapon"] == "Fruit")
-			and (_G.EclipseStartFarm or _G.Settings.Main["Auto Farm Mon"] or _G.Settings.Main["Auto Farm Fast"]
+			and (_G.KynVexStartFarm or _G.Settings.Main["Auto Farm Mon"] or _G.Settings.Main["Auto Farm Fast"]
 				or _G.Settings.Main["Auto Farm All Boss"] or _G.Settings.Main["Auto Farm Boss"]
-				or _G.Settings.Main["Auto Farm Fruit Mastery"] or _G.EclipseLevel)
+				or _G.Settings.Main["Auto Farm Fruit Mastery"] or _G.KynVexLevel)
 		then
 			pcall(function()
 				local char = game.Players.LocalPlayer.Character;
@@ -14395,8 +14395,8 @@ task.spawn(function()
 			local char = game.Players.LocalPlayer.Character;
 			if not char then return; end;
 			local hum = char:FindFirstChildOfClass("Humanoid");
-			if hum and not _G.EclipseLevel and not _G.EclipseFarm_Bone
-					and not _G.EclipseFarm_Cake and not _G.EclipseAutoTyrant then
+			if hum and not _G.KynVexLevel and not _G.KynVexFarm_Bone
+					and not _G.KynVexFarm_Cake and not _G.KynVexAutoTyrant then
 				if hum.WalkSpeed < 16 then hum.WalkSpeed = 16; end;
 			end;
 		end);
@@ -14894,16 +14894,16 @@ elseif World3 then
 		"Ice Cream Island",
 		"Peanut Island",
 		"Cake Island",
-		"Cocoa Island",
+		"Cocao Island",
 		"Candy Island",
 		"Tiki Outpost",
 		"Dragon Dojo"
 	};
 end;
-local EclipseIslandList = {};
+local KynVexIslandList = {};
 pcall(function()
 	for _, loc in pairs(workspace._WorldOrigin.Locations:GetChildren()) do
-		table.insert(EclipseIslandList, loc.Name);
+		table.insert(KynVexIslandList, loc.Name);
 	end;
 end);
 local PortalIslands = {
@@ -14916,9 +14916,9 @@ local PortalIslands = {
 };
 SelectedTeleportIslandDropdown = TeleportTab:AddDropdown({
 	Title = "Choose Island",
-	Desc = "Lista dinamica do Eclipse - le o mapa real",
-	Values = EclipseIslandList,
-	Value = EclipseIslandList[1] or "",
+	Desc = "Lista dinamica do KynVex - le o mapa real",
+	Values = KynVexIslandList,
+	Value = KynVexIslandList[1] or "",
 	Callback = function(option)
 		_G.SelectIsland = option;
 	end
@@ -15056,21 +15056,21 @@ AutoTweenToIslandToggle = TeleportTab:AddToggle({
 });
 
 TeleportNpcSection = TeleportTab:AddSection("Npc");
-local EclipseNPCList = {};
+local KynVexNPCList = {};
 pcall(function()
 	local replNPCs = (game:GetService("ReplicatedStorage")):FindFirstChild("NPCs");
 	if replNPCs then
 		for _, npc in pairs(replNPCs:GetChildren()) do
-			table.insert(EclipseNPCList, npc.Name);
+			table.insert(KynVexNPCList, npc.Name);
 		end;
 	end;
 end);
-local SelectedNpcName = EclipseNPCList[1] or "";
+local SelectedNpcName = KynVexNPCList[1] or "";
 SelectedNpcTeleport = TeleportTab:AddDropdown({
 	Title = "Choose Npc",
-	Desc = "Lista dinamica do Eclipse - NPCs reais do servidor",
-	Values = EclipseNPCList,
-	Value = EclipseNPCList[1] or "",
+	Desc = "Lista dinamica do KynVex - NPCs reais do servidor",
+	Values = KynVexNPCList,
+	Value = KynVexNPCList[1] or "",
 	Callback = function(option)
 		SelectedNpcName = option;
 		_G.SelectNPC = option;
