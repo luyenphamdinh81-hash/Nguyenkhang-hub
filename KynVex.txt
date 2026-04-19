@@ -4198,24 +4198,24 @@ function Kz.CreateMain(Y)
 	return V;
 end;
 local Cz = Kz.CreateMain({ Desc = "" });
-local vz = Cz.T({ Page_Name = "Farm", Page_Title = "Farm" });
-local mz = Cz.T({ Page_Name = "Config", Page_Title = "Config" });
+local vz = Cz.T({ Page_Name = "Main Farm", Page_Title = " Main Farm" });
+local mz = Cz.T({ Page_Name = "Setting", Page_Title = "Setting" });
 local yz = Cz.T({ Page_Name = "Fighting Style", Page_Title = "Fighting Style" });
-local bz = Cz.T({ Page_Name = "Items Farm", Page_Title = "Items Farm" });
-local cz = Cz.T({ Page_Name = "Sea Events", Page_Title = "Sea Events" });
+local bz = Cz.T({ Page_Name = "Farm Item", Page_Title = "Items Farm" });
+local cz = Cz.T({ Page_Name = "Event sea", Page_Title = "Event sea" });
 local Hz = Cz.T({ Page_Name = "Mirage + RaceV4", Page_Title = "Mirage + RaceV4" });
-local Sz = Cz.T({ Page_Name = "Drago Dojo", Page_Title = "Drago Dojo" });
-local oz = Cz.T({ Page_Name = "Prehistoric", Page_Title = "Prehistoric" });
-local Zz = Cz.T({ Page_Name = "Raid", Page_Title = "Raid" });
+local Sz = Cz.T({ Page_Name = "Dragon Dojo", Page_Title = "Dragon Dojo" });
+local oz = Cz.T({ Page_Name = "Prehistoric island", Page_Title = "Prehistoric island" });
+local Zz = Cz.T({ Page_Name = "Auto Raid", Page_Title = "Auto Raid" });
 local Tz = Cz.T({ Page_Name = "Combat PVP", Page_Title = "Combat PVP" });
-local kz = Cz.T({ Page_Name = "Teleport", Page_Title = "Teleport" });
+local kz = Cz.T({ Page_Name = "Teleport island", Page_Title = "Teleport island" });
 local Lz = Cz.T({ Page_Name = "Fruits", Page_Title = "Fruits" });
-local Pz = Cz.T({ Page_Name = "Shop", Page_Title = "Shop" });
+local Pz = Cz.T({ Page_Name = "Shopping", Page_Title = "Shopping" });
 local jz = Cz.T({ Page_Name = "Misc", Page_Title = "Misc" });
 local Gz = vz.CreateSection("Farm");
 Gz.CreateToggle({
 	Title = "Auto Farm Level",
-	Description = "",
+	Description = "auto lv1-2800",
 	Default = false,
 	Callback = function(Y)
 		_G.Level = Y;
