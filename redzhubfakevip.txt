@@ -1,17 +1,14 @@
-Settings = Settings or {}
-
-local Players = game:GetService("Players")
-local ReplicatedStorage = game:GetService("ReplicatedStorage")
-local HttpService = game:GetService("HttpService")
-
-local Plr = Players.LocalPlayer
-
-if Settings.Translator == true then
-    pcall(function()
-        _G.RedzTranslator = HttpService:JSONDecode(game:HttpGet("https://raw.githubusercontent.com/PlockScripts/newredz/refs/heads/main/NewTranslator/NewBloxFruits/NewPortuguese.json"))
-    end)
-end
-
+local Rayfield = loadstring(game:HttpGet("PASTE_URL_HERE"))()
+local Window = Rayfield:CreateWindow({
+Name = "My Script",
+LoadingTitle = "Rayfield UI",
+LoadingSubtitle = "by YourName",
+ConfigurationSaving = {
+Enabled = true,
+FolderName = "MyRayfield",
+FileName = "Config"
+}
+})
 local function JoinTeam()
     local targetTeam = "Marines"
     if Settings.JoinTeam == "Pirates" then
