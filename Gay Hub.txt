@@ -235,7 +235,7 @@ local O = workspace:FindFirstChild("Rocks");
 if O then
 	O:Destroy();
 end;
-KynVex= (function()
+KynVex = (function()
 		local Y = game:GetService("Lighting");
 		local d = Y:FindFirstChild("LightingLayers");
 		if d and (game:GetService("Lighting") and game:GetService("Lighting")) then
@@ -893,7 +893,7 @@ end;
 spawn(function()
 	while task.wait() do
 		pcall(function()
-			if _G.SailBoat_Hydra or _G.WardenBoss or _G.AutoFactory or _G.HighestMirage or _G.HCM or _G.PGB or _G.Leviathan1 or _G.UPGDrago or _G.Complete_Trials or _G.TpDrago_Prehis or _G.BuyDrago or _G.AutoFireFlowers or _G.DT_Uzoth or _G.AutoBerry or _G.Prehis_Find or _G.Prehis_Skills or _G.Prehis_DB or _G.Prehis_DE or _G.FarmBlazeEM or _G.Dojoo or _G.CollectPresent or _G.AutoLawKak or _G.TpLab or _G.AutoPhoenixF or _G.AutoFarmChest or _G.AutoHytHallow or _G.LongsWord or _G.BlackSpikey or _G.AutoHolyTorch or _G.TrainDrago or _G.AutoSaber or _G.FarmMastery_Dev or _G.CitizenQuest or _G.AutoEctoplasm or _G.KeysRen or _G.Auto_Rainbow_Haki or _G.obsFarm or _G.AutoBigmom or _G.Doughv2 or _G.AuraBoss or _G.Raiding or _G.Auto_Cavender or _G.TpPly or _G.Bartilo_Quest or _G.Level or _G.FarmEliteHunt or _G.AutoZou or _G.AutoFarm_Bone or (getgenv()).AutoMaterial or _G.CraftVM or _G.FrozenTP or _G.TPDoor or _G.AcientOne or _G.AutoFarmNear or _G.AutoRaidCastle or _G.DarkBladev3 or _G.AutoFarmRaid or _G.Auto_Cake_Prince or _G.Addealer or _G.TPNpc or _G.TwinHook or _G.FindMirage or _G.FarmChestM or _G.Shark or _G.TerrorShark or _G.Piranha or _G.MobCrew or _G.SeaBeast1 or _G.FishBoat or _G.AutoPole or _G.AutoPoleV2 or _G.Auto_SuperHuman or _G.AutoDeathStep or _G.Auto_SharkMan_Karate or _G.Auto_Electric_Claw or _G.AutoDragonTalon or _G.Auto_Def_DarkCoat or _G.Auto_God_Human or _G.Auto_Tushita or _G.AutoMatSoul or _G.AutoKenVTWO or _G.AutoSerpentBow or _G.AutoFMon or _G.Auto_Soul_Guitar or _G.TPGEAR or _G.AutoSaw or _G.AutoTridentW2 or _G.Auto_StartRaid or _G.AutoEvoRace or _G.AutoGetQuestBounty or _G.MarinesCoat or _G.TravelDres or _G.Defeating or _G.DummyMan or _G.Auto_Yama or _G.Auto_SwanGG or _G.SwanCoat or _G.AutoEcBoss or _G.Auto_Mink or _G.Auto_Human or _G.Auto_Skypiea or _G.Auto_Fish or _G.CDK_TS or _G.CDK_YM or _G.CDK or _G.AutoFarmGodChalice or _G.AutoFistDarkness or _G.AutoMiror or _G.Teleport or _G.AutoKilo or _G.AutoGetUsoap or _G.Praying or _G.TryLucky or _G.AutoColShad or _G.AutoUnHaki or _G.Auto_DonAcces or _G.AutoRipInKynVexor _G.DragoV3 or _G.DragoV1 or _G.SailBoats or NextIs or _G.FarmGodChalice or _G.IceBossRen or senth or senth2 or _G.Lvthan or _G.beasthunter or _G.DangerLV or _G.Relic123 or _G.tweenKitsune or _G.Collect_Ember or _G.AutofindKitIs or _G.snaguine or _G.TwFruits or _G.tweenKitShrine or _G.Tp_LgS or _G.Tp_MasterA or _G.tweenShrine or _G.FarmMastery_G or _G.FarmMastery_S then
+			if _G.SailBoat_Hydra or _G.WardenBoss or _G.AutoFactory or _G.HighestMirage or _G.HCM or _G.PGB or _G.Leviathan1 or _G.UPGDrago or _G.Complete_Trials or _G.TpDrago_Prehis or _G.BuyDrago or _G.AutoFireFlowers or _G.DT_Uzoth or _G.AutoBerry or _G.Prehis_Find or _G.Prehis_Skills or _G.Prehis_DB or _G.Prehis_DE or _G.FarmBlazeEM or _G.Dojoo or _G.CollectPresent or _G.AutoLawKak or _G.TpLab or _G.AutoPhoenixF or _G.AutoFarmChest or _G.AutoHytHallow or _G.LongsWord or _G.BlackSpikey or _G.AutoHolyTorch or _G.TrainDrago or _G.AutoSaber or _G.FarmMastery_Dev or _G.CitizenQuest or _G.AutoEctoplasm or _G.KeysRen or _G.Auto_Rainbow_Haki or _G.obsFarm or _G.AutoBigmom or _G.Doughv2 or _G.AuraBoss or _G.Raiding or _G.Auto_Cavender or _G.TpPly or _G.Bartilo_Quest or _G.Level or _G.FarmEliteHunt or _G.AutoZou or _G.AutoFarm_Bone or (getgenv()).AutoMaterial or _G.CraftVM or _G.FrozenTP or _G.TPDoor or _G.AcientOne or _G.AutoFarmNear or _G.AutoRaidCastle or _G.DarkBladev3 or _G.AutoFarmRaid or _G.Auto_Cake_Prince or _G.Addealer or _G.TPNpc or _G.TwinHook or _G.FindMirage or _G.FarmChestM or _G.Shark or _G.TerrorShark or _G.Piranha or _G.MobCrew or _G.SeaBeast1 or _G.FishBoat or _G.AutoPole or _G.AutoPoleV2 or _G.Auto_SuperHuman or _G.AutoDeathStep or _G.Auto_SharkMan_Karate or _G.Auto_Electric_Claw or _G.AutoDragonTalon or _G.Auto_Def_DarkCoat or _G.Auto_God_Human or _G.Auto_Tushita or _G.AutoMatSoul or _G.AutoKenVTWO or _G.AutoSerpentBow or _G.AutoFMon or _G.Auto_Soul_Guitar or _G.TPGEAR or _G.AutoSaw or _G.AutoTridentW2 or _G.Auto_StartRaid or _G.AutoEvoRace or _G.AutoGetQuestBounty or _G.MarinesCoat or _G.TravelDres or _G.Defeating or _G.DummyMan or _G.Auto_Yama or _G.Auto_SwanGG or _G.SwanCoat or _G.AutoEcBoss or _G.Auto_Mink or _G.Auto_Human or _G.Auto_Skypiea or _G.Auto_Fish or _G.CDK_TS or _G.CDK_YM or _G.CDK or _G.AutoFarmGodChalice or _G.AutoFistDarkness or _G.AutoMiror or _G.Teleport or _G.AutoKilo or _G.AutoGetUsoap or _G.Praying or _G.TryLucky or _G.AutoColShad or _G.AutoUnHaki or _G.Auto_DonAcces or _G.AutoRipInKynVex or _G.DragoV3 or _G.DragoV1 or _G.SailBoats or NextIs or _G.FarmGodChalice or _G.IceBossRen or senth or senth2 or _G.Lvthan or _G.beasthunter or _G.DangerLV or _G.Relic123 or _G.tweenKitsune or _G.Collect_Ember or _G.AutofindKitIs or _G.snaguine or _G.TwFruits or _G.tweenKitShrine or _G.Tp_LgS or _G.Tp_MasterA or _G.tweenShrine or _G.FarmMastery_G or _G.FarmMastery_S then
 				y = true;
 				if not d.Character.HumanoidRootPart:FindFirstChild("BodyClip") then
 					local Y = Instance.new("BodyVelocity");
@@ -1894,7 +1894,7 @@ local Uz = function(Y)
 		local A = tostring((nz.Getcolor(dz.UIColor["Title Text Color"]))[2]);
 		local u = tostring((nz.Getcolor(dz.UIColor["Title Text Color"]))[3]);
 		local g = D .. ("," .. (A .. ("," .. u)));
-		K.Text = "<font color=\"rgb(" .. (g .. (")\">KynVexHub</font> " .. dz.TitleNameNoti));
+		K.Text = "<font color=\"rgb(" .. (g .. (")\">KynVex Hub</font> " .. dz.TitleNameNoti));
 		K.Name = "TextLabelNoti";
 		K.Parent = w;
 		K.BackgroundColor3 = Color3.fromRGB(230, 230, 230);
@@ -2028,7 +2028,7 @@ function Kz.CreateMain(Y)
 	local U = tostring((nz.Getcolor(dz.UIColor["Title Text Color"]))[2]);
 	local C = tostring((nz.Getcolor(dz.UIColor["Title Text Color"]))[3]);
 	local v = i .. ("," .. (U .. ("," .. C)));
-	M.Text = "<font color=\"rgb(" .. (v .. ")\">KynVexHub </font> : Blox Fruits");
+	M.Text = "<font color=\"rgb(" .. (v .. ")\">KynVex Hub </font> : Blox Fruits");
 	z = Instance.new("ImageLabel");
 	z.Name = "MainContainer";
 	z.Parent = Q;
@@ -2091,7 +2091,7 @@ function Kz.CreateMain(Y)
 	local c = tostring((nz.Getcolor(dz.UIColor["Title Text Color"]))[2]);
 	local H = tostring((nz.Getcolor(dz.UIColor["Title Text Color"]))[3]);
 	local S = b .. ("," .. (c .. ("," .. H)));
-	M.Text = "<font color=\"rgb(" .. (S .. ")\">KynVexHub </font> : Blox Fruits");
+	M.Text = "<font color=\"rgb(" .. (S .. ")\">KynVex Hub </font> : Blox Fruits");
 	K.Name = "Background1";
 	K.Parent = g;
 	K.Position = UDim2.new(0, 5, 0, 0);
@@ -4198,24 +4198,24 @@ function Kz.CreateMain(Y)
 	return V;
 end;
 local Cz = Kz.CreateMain({ Desc = "" });
-local vz = Cz.T({ Page_Name = "Main Auto farm", Page_Title = "Main Auto farm" });
-local mz = Cz.T({ Page_Name = "Setting", Page_Title = "Setting" });
-local yz = Cz.T({ Page_Name = "auto buy melee", Page_Title = "Auto buy melee" });
-local bz = Cz.T({ Page_Name = "Farm item", Page_Title = "Farm item" });
-local cz = Cz.T({ Page_Name = "Event sea", Page_Title = "Event sea" });
+local vz = Cz.T({ Page_Name = "Farm", Page_Title = "Farm" });
+local mz = Cz.T({ Page_Name = "Config", Page_Title = "Config" });
+local yz = Cz.T({ Page_Name = "Fighting Style", Page_Title = "Fighting Style" });
+local bz = Cz.T({ Page_Name = "Items Farm", Page_Title = "Items Farm" });
+local cz = Cz.T({ Page_Name = "Sea Events", Page_Title = "Sea Events" });
 local Hz = Cz.T({ Page_Name = "Mirage + RaceV4", Page_Title = "Mirage + RaceV4" });
-local Sz = Cz.T({ Page_Name = "event dragon dojo", Page_Title = "event dragon dojo" });
-local oz = Cz.T({ Page_Name = "Prehistoric island", Page_Title = "Prehistoric island" });
-local Zz = Cz.T({ Page_Name = "Arcane Trial raid", Page_Title = "Arcane Trial raid" });
-local Tz = Cz.T({ Page_Name = "Grand Duel PVP", Page_Title = "Grand Duel PVP" });
-local kz = Cz.T({ Page_Name = "Teleport vicinity", Page_Title = "Teleport vicinity" });
-local Lz = Cz.T({ Page_Name = "Abyssal Fruit", Page_Title = "Abyssal Fruit" });
-local Pz = Cz.T({ Page_Name = "boutique shop", Page_Title = " boutique shop" });
-local jz = Cz.T({ Page_Name = "miscellaneous diverse", Page_Title = "miscellaneous diverse" });
+local Sz = Cz.T({ Page_Name = "Drago Dojo", Page_Title = "Drago Dojo" });
+local oz = Cz.T({ Page_Name = "Prehistoric", Page_Title = "Prehistoric" });
+local Zz = Cz.T({ Page_Name = "Raid", Page_Title = "Raid" });
+local Tz = Cz.T({ Page_Name = "Combat PVP", Page_Title = "Combat PVP" });
+local kz = Cz.T({ Page_Name = "Teleport", Page_Title = "Teleport" });
+local Lz = Cz.T({ Page_Name = "Fruits", Page_Title = "Fruits" });
+local Pz = Cz.T({ Page_Name = "Shop", Page_Title = "Shop" });
+local jz = Cz.T({ Page_Name = "Misc", Page_Title = "Misc" });
 local Gz = vz.CreateSection("Farm");
 Gz.CreateToggle({
 	Title = "Auto Farm Level",
-	Description = "farm lv1-2800",
+	Description = "",
 	Default = false,
 	Callback = function(Y)
 		_G.Level = Y;
@@ -5564,7 +5564,7 @@ spawn(function()
 end);
 NF.CreateToggle({
 	Title = "Auto Random Bones",
-	Description = " random xương",
+	Description = "",
 	Default = false,
 	Callback = function(Y)
 		_G.Auto_Random_Bone = Y;
@@ -6244,19 +6244,19 @@ UF.CreateToggle({
 	Description = "",
 	Default = false,
 	Callback = function(Y)
-		_G.AutoRipInKynVex= Y;
+		_G.AutoRipInKynVex = Y;
 	end,
 });
 spawn(function()
 	while wait(T) do
 		pcall(function()
-			if _G.AutoRipInKynVexthen
+			if _G.AutoRipInKynVex then
 				local Y = GetConnectionEnemies("rip_indra");
 				if not GetWP("Dark Dagger") or not GetIn("Valkyrie") and Y then
 					repeat
 						wait();
 						f.Kill(Y, _G.AutoRipInKynVex);
-					until not _G.AutoRipInKynVexor not Y.Parent or Y.Humanoid.Health <= 0;
+					until not _G.AutoRipInKynVex or not Y.Parent or Y.Humanoid.Health <= 0;
 				else
 					Q.Remotes.CommF_:InvokeServer("requestEntrance", Vector3.new(-5097.93164, 316.447021, -3142.66602, -0.405007899, -4.31682743e-08, .914313197, -1.90943332e-08, 1, 3.8755779e-08, -0.914313197, -1.76180437e-09, -0.405007899));
 					wait(.1);
@@ -9070,14 +9070,14 @@ end);
 spawn(function()
 	while wait(.2) do
 		pcall(function()
-			moon8 = "http://www.roblox.com/asset/?id=81112013892539";
-			moon7 = "http://www.roblox.com/asset/?id=81112013892539";
-			moon6 = "http://www.roblox.com/asset/?id=81112013892539";
-			moon5 = "http://www.roblox.com/asset/?id=81112013892539";
-			moon4 = "http://www.roblox.com/asset/?id=81112013892539";
-			moon3 = "http://www.roblox.com/asset/?id=81112013892539";
-			moon2 = "http://www.roblox.com/asset/?id=81112013892539";
-			moon1 = "http://www.roblox.com/asset/?id=81112013892539";
+			moon8 = "http://www.roblox.com/asset/?id=79169432288417";
+			moon7 = "http://www.roblox.com/asset/?id=79169432288417";
+			moon6 = "http://www.roblox.com/asset/?id=79169432288417";
+			moon5 = "http://www.roblox.com/asset/?id=79169432288417";
+			moon4 = "http://www.roblox.com/asset/?id=79169432288417";
+			moon3 = "http://www.roblox.com/asset/?id=79169432288417";
+			moon2 = "http://www.roblox.com/asset/?id=79169432288417";
+			moon1 = "http://www.roblox.com/asset/?id=79169432288417";
 			moon = Getmoon();
 			if moon == moon1 then
 				FullMOOn:SetDesc("Moon : 0 / 8");
@@ -11405,7 +11405,7 @@ HakiClorEsp = function()
 			for Y, R in pairs(Q.NPCs:GetChildren()) do
 				if R.Name == "Barista Cousin" then
 					if not workspace:FindFirstChild("KynVex") then
-						KynVex= Instance.new("Part");
+						KynVex = Instance.new("Part");
 						KynVex.Name = "KynVex";
 						KynVex.Transparency = 1;
 						KynVex.Size = Vector3.new(1, 1, 1);
@@ -12754,220 +12754,3 @@ task.spawn(function()
 		end);
 	end);
 end);
-  _G.FastAttack = true
-if _G.FastAttack then
-    local _ENV = (getgenv or getrenv or getfenv)()
-
-    local function SafeWaitForChild(parent, childName)
-        local success, result = pcall(function()
-            return parent:WaitForChild(childName)
-        end)
-        if not success or not result then
-            warn("noooooo: " .. childName)
-        end
-        return result
-    end
-
-    local function WaitChilds(path, ...)
-        local last = path
-        for _, child in {...} do
-            last = last:FindFirstChild(child) or SafeWaitForChild(last, child)
-            if not last then
-                break
-            end
-        end
-        return last
-    end
-
-    local VirtualInputManager = game:GetService("VirtualInputManager")
-    local CollectionService = game:GetService("CollectionService")
-    local ReplicatedStorage = game:GetService("ReplicatedStorage")
-    local TeleportService = game:GetService("TeleportService")
-    local RunService = game:GetService("RunService")
-    local Players = game:GetService("Players")
-    local Player = Players.LocalPlayer
-
-    if not Player then
-        warn(".")
-        return
-    end
-
-    local Remotes = SafeWaitForChild(ReplicatedStorage, "Remotes")
-    if not Remotes then
-        return
-    end
-
-    local Validator = SafeWaitForChild(Remotes, "Validator")
-    local CommF = SafeWaitForChild(Remotes, "CommF_")
-    local CommE = SafeWaitForChild(Remotes, "CommE")
-
-    local ChestModels = SafeWaitForChild(workspace, "ChestModels")
-    local WorldOrigin = SafeWaitForChild(workspace, "_WorldOrigin")
-    local Characters = SafeWaitForChild(workspace, "Characters")
-    local Enemies = SafeWaitForChild(workspace, "Enemies")
-    local Map = SafeWaitForChild(workspace, "Map")
-
-    local EnemySpawns = SafeWaitForChild(WorldOrigin, "EnemySpawns")
-    local Locations = SafeWaitForChild(WorldOrigin, "Locations")
-
-    local RenderStepped = RunService.RenderStepped
-    local Heartbeat = RunService.Heartbeat
-    local Stepped = RunService.Stepped
-
-    local Modules = SafeWaitForChild(ReplicatedStorage, "Modules")
-    local Net = SafeWaitForChild(Modules, "Net")
-
-    local sethiddenproperty = sethiddenproperty or function(...)
-        return ...
-    end
-    local setupvalue = setupvalue or (debug and debug.setupvalue)
-    local getupvalue = getupvalue or (debug and debug.getupvalue)
-
-    local Settings = {
-        AutoClick = true,
-        ClickDelay = 0
-    }
-
-    local Module = {}
-
-    Module.FastAttack = (function()
-        if _ENV.rz_FastAttack then
-            return _ENV.rz_FastAttack
-        end
-
-        local FastAttack = {
-            Distance = 100,
-            attackMobs = true,
-            attackPlayers = true,
-            Equipped = nil
-        }
-
-        local RegisterAttack = SafeWaitForChild(Net, "RE/RegisterAttack")
-        local RegisterHit = SafeWaitForChild(Net, "RE/RegisterHit")
-
-        local function IsAlive(character)
-            return character and character:FindFirstChild("Humanoid") and character.Humanoid.Health > 0
-        end
-
-        local function ProcessEnemies(OthersEnemies, Folder)
-            local BasePart = nil
-            for _, Enemy in Folder:GetChildren() do
-                local Head = Enemy:FindFirstChild("Head")
-                if Head and IsAlive(Enemy) and Player:DistanceFromCharacter(Head.Position) < FastAttack.Distance then
-                    if Enemy ~= Player.Character then
-                        table.insert(OthersEnemies, {Enemy, Head})
-                        BasePart = Head
-                    end
-                end
-            end
-            return BasePart
-        end
-
-        function FastAttack:Attack(BasePart, OthersEnemies)
-            if not BasePart or #OthersEnemies == 0 then
-                return
-            end
-            RegisterAttack:FireServer(Settings.ClickDelay or 0)
-            RegisterHit:FireServer(BasePart, OthersEnemies)
-        end
-
-        function FastAttack:AttackNearest()
-            local OthersEnemies = {}
-            local Part1 = ProcessEnemies(OthersEnemies, Enemies)
-            local Part2 = ProcessEnemies(OthersEnemies, Characters)
-
-            local character = Player.Character
-            if not character then
-                return
-            end
-            local equippedWeapon = character:FindFirstChildOfClass("Tool")
-
-            if equippedWeapon and equippedWeapon:FindFirstChild("LeftClickRemote") then
-                for _, enemyData in ipairs(OthersEnemies) do
-                    local enemy = enemyData[1]
-                    local direction = (enemy.HumanoidRootPart.Position - character:GetPivot().Position).Unit
-                    pcall(function()
-                        equippedWeapon.LeftClickRemote:FireServer(direction, 1)
-                    end)
-                end
-            elseif #OthersEnemies > 0 then
-                self:Attack(Part1 or Part2, OthersEnemies)
-            else
-                task.wait(0)
-            end
-        end
-
-        function FastAttack:BladeHits()
-            local Equipped = IsAlive(Player.Character) and Player.Character:FindFirstChildOfClass("Tool")
-            if Equipped and Equipped.ToolTip ~= "Gun" then
-                self:AttackNearest()
-            else
-                task.wait(0)
-            end
-        end
-
-        task.spawn(function()
-            while task.wait(Settings.ClickDelay) do
-                if Settings.AutoClick then
-                    FastAttack:BladeHits()
-                end
-            end
-        end)
-
-        _ENV.rz_FastAttack = FastAttack
-        return FastAttack
-    end)()
-end
-local remote, idremote
-for _, v in next, ({game.ReplicatedStorage.Util, game.ReplicatedStorage.Common, game.ReplicatedStorage.Remotes,
-                    game.ReplicatedStorage.Assets, game.ReplicatedStorage.FX}) do
-    for _, n in next, v:GetChildren() do
-        if n:IsA("RemoteEvent") and n:GetAttribute("Id") then
-            remote, idremote = n, n:GetAttribute("Id")
-        end
-    end
-    v.ChildAdded:Connect(function(n)
-        if n:IsA("RemoteEvent") and n:GetAttribute("Id") then
-            remote, idremote = n, n:GetAttribute("Id")
-        end
-    end)
-end
-task.spawn(function()
-    while task.wait(0.05) do
-        local char = game.Players.LocalPlayer.Character
-        local root = char and char:FindFirstChild("HumanoidRootPart")
-        local parts = {}
-        for _, x in ipairs({workspace.Enemies, workspace.Characters}) do
-            for _, v in ipairs(x and x:GetChildren() or {}) do
-                local hrp = v:FindFirstChild("HumanoidRootPart")
-                local hum = v:FindFirstChild("Humanoid")
-                if v ~= char and hrp and hum and hum.Health > 0 and (hrp.Position - root.Position).Magnitude <= 60 then
-                    for _, _v in ipairs(v:GetChildren()) do
-                        if _v:IsA("BasePart") and (hrp.Position - root.Position).Magnitude <= 60 then
-                            parts[#parts + 1] = {v, _v}
-                        end
-                    end
-                end
-            end
-        end
-        local tool = char:FindFirstChildOfClass("Tool")
-        if #parts > 0 and tool and
-            (tool:GetAttribute("WeaponType") == "Melee" or tool:GetAttribute("WeaponType") == "Sword") then
-            pcall(function()
-                require(game.ReplicatedStorage.Modules.Net):RemoteEvent("RegisterHit", true)
-                game.ReplicatedStorage.Modules.Net["RE/RegisterAttack"]:FireServer()
-                local head = parts[1][1]:FindFirstChild("Head")
-                if not head then
-                    return
-                end
-                game.ReplicatedStorage.Modules.Net["RE/RegisterHit"]:FireServer(head, parts, {}, tostring(
-                    game.Players.LocalPlayer.UserId):sub(2, 4) .. tostring(coroutine.running()):sub(11, 15))
-                cloneref(remote):FireServer(string.gsub("RE/RegisterHit", ".", function(c)
-                    return string.char(
-                        bit32.bxor(string.byte(c), math.floor(workspace:GetServerTimeNow() / 10 % 10) + 1))
-                end), bit32.bxor(idremote + 909090, game.ReplicatedStorage.Modules.Net.seed:InvokeServer() * 2), head,
-                    parts)
-            end)
-        end
-    end
-end)
