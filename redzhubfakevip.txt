@@ -3738,7 +3738,7 @@ function CheckItemBPCRBPCR(v463)
 end
 local vu32 = loadstring(game:HttpGet("https://raw.githubusercontent.com/PlockScripts/Library-ui/refs/heads/main/redz-V5-remake/main.luau"))()
 local v466 = vu32:MakeWindow({
-    Title = "redz hub [ SKIDDED VERSION BY ZERO ] : Blox Fruits",
+    Title = "KynVex Hub",
     SubTitle = "skidded version",
     SaveFolder = "Redz | redz lib v5.lua"
 })
@@ -3752,7 +3752,7 @@ v466:AddMinimizeButton({
 local v484 = v466:MakeTab({"Discord", "info"})
 local v485 = v466:MakeTab({"Farm", "home"})
 local v487 = v466:MakeTab({"Quest | Items", "swords"})
-local v486 = v466:MakeTab({"Auto Fishing", "rbxassetid://91633383470522"})
+local v486 = v466:MakeTab({"Auto Fishing", "rbxassetid://127664059821666"})
 local v489 = v466:MakeTab({"Sea Event", "waves"})
 local v491 = v466:MakeTab({"Raid/Fruits", "cherry"})
 local v497 = v466:MakeTab({"Stats", "Signal"})
@@ -3762,10 +3762,10 @@ local v494 = v466:MakeTab({"Visual", "user"})
 local v495 = v466:MakeTab({"Shop", "shoppingCart"})
 local v496 = v466:MakeTab({"Misc", "settings"})
 v484:AddDiscordInvite({
-    Name = "KynVexHub | Community",
+    Name = "DesplockHub | Community",
     Description = "Join server to receive Update",
-    Logo = "rbxassetid://91633383470522",
-    Invite = "https://discord.gg/WDVdcv5u"
+    Logo = "rbxassetid://131723242350068",
+    Invite = "https://discord.gg/BnEDf68jwx"
 })
 _G.SelectWeapon = "Melee"
 task.spawn(function()
@@ -6636,7 +6636,7 @@ if World3 then
                                             game.StarterGui:SetCore("SendNotification", {
                                                 Title = "Tu   n Anh IOS",
                                                 Text = "Use! - Yama or Tushita",
-                                                con = "rbxassetid://91633383470522",
+                                                con = "rbxassetid://131185267344742",
                                                 Duration = 10
                                             })
                                             v798 = true
